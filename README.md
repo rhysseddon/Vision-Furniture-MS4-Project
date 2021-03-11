@@ -105,7 +105,96 @@ to navigate a website and keep their user experience as streamlined as possible 
 
 ### Skeleton
 
-#### Wireframes
+### Wireframes
+
+<details>
+<summary>Home Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-home.png)
+</p>
+</details>
+
+<details>
+<summary>Products Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-products.png)
+</p>
+</details>
+
+<details>
+<summary>Profile Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-profile.png)
+</p>
+</details>
+
+<details>
+<summary>Login Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-login.png)
+</p>
+</details>
+
+<details>
+<summary>Register Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-register.png)
+</p>
+</details>
+
+<details>
+<summaryShopping Bag Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-shopping-bag.png)
+</p>
+</details>
+
+<details>
+<summary>Checkout Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-checkout.png)
+</p>
+</details>
+
+<details>
+<summary>Checkout Success Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-checkout-success.png)
+</p>
+</details>
+
+<details>
+<summary>Admin Add Products Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-admin-add.png)
+</p>
+</details>
+
+<details>
+<summary>Admin Edit Products Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-admin-edit.png)
+</p>
+</details>
+
+<details>
+<summary>Help Centre Page (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/desktop-help.png)
+</p>
+</details>
+
 
 # Features
 
