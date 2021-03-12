@@ -108,90 +108,90 @@ to navigate a website and keep their user experience as streamlined as possible 
 ### Wireframes
 
 <details>
-<summary>Home Page (Click for images)</summary>
+<summary>Home (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-home.png)
+![Image](readme-images/wireframes/home-wireframes.png)
 </p>
 </details>
 
 <details>
-<summary>Products Page (Click for images)</summary>
+<summary>Product Pages  (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-products.png)
+![Image](readme-images/wireframes/products-wireframes.png)
 </p>
 </details>
 
 <details>
-<summary>Profile Page (Click for images)</summary>
+<summary>Profile (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-profile.png)
+![Image](readme-images/wireframes/profile-wireframes.png)
 </p>
 </details>
 
 <details>
-<summary>Login Page (Click for images)</summary>
+<summary>Login (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-login.png)
+![Image](readme-images/wireframes/login-wireframes.png)
 </p>
 </details>
 
 <details>
-<summary>Register Page (Click for images)</summary>
+<summary>Register (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-register.png)
+![Image](readme-images/wireframes/register-wireframes.png)
 </p>
 </details>
 
 <details>
-<summary>Shopping Bag Page (Click for images)</summary>
+<summary>Shopping Bag (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-shopping-bag.png)
+![Image](readme-images/wireframes/shopping-bag-wireframes.png)
 </p>
 </details>
 
 <details>
-<summary>Checkout Page (Click for images)</summary>
+<summary>Checkout (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-checkout.png)
+![Image](readme-images/wireframes/checkout-wireframes.png)
 </p>
 </details>
 
 <details>
-<summary>Checkout Success Page (Click for images)</summary>
+<summary>Checkout Success (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-checkout-success.png)
+![Image](readme-images/wireframes/checkout-success-wireframes.png)
 </p>
 </details>
 
 <details>
-<summary>Admin Add Products Page (Click for images)</summary>
+<summary>Admin Add Products (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-admin-add.png)
+![Image](readme-images/wireframes/admin-add-wireframes.png)
 </p>
 </details>
 
 <details>
-<summary>Admin Edit Products Page (Click for images)</summary>
+<summary>Admin Edit Products (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-admin-edit.png)
+![Image](readme-images/wireframes/admin-edit-wireframes.png)
 </p>
 </details>
 
 <details>
-<summary>Help Centre Page (Click for images)</summary>
+<summary>Help Centre (Click for images)</summary>
 <p align="center">
 
-![Image](readme-images/wireframes/desktop-help.png)
+![Image](readme-images/wireframes/help-wireframes.png)
 </p>
 </details>
 
