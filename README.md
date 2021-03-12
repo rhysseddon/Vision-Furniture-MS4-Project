@@ -148,7 +148,7 @@ to navigate a website and keep their user experience as streamlined as possible 
 </details>
 
 <details>
-<summaryShopping Bag Page (Click for images)</summary>
+<summary>Shopping Bag Page (Click for images)</summary>
 <p align="center">
 
 ![Image](readme-images/wireframes/desktop-shopping-bag.png)
