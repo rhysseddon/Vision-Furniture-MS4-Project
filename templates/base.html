@@ -15,14 +15,20 @@
     {% endblock %}
 
     {% block corecss %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
+    <script src="https://kit.fontawesome.com/65dede8dbe.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>
@@ -49,14 +55,11 @@
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <img src="{{ MEDIA_URL }}vision-logo.png" alt="">
-            <a class="navbar-brand" href="#">The Furniture Shop</a>
+            
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="media/vision-logo.png" class="img-fluid" alt="..."></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -75,26 +78,33 @@
                         <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
                             <div class="dropdown-item">
                                 <div class="row">
-                                    <div class="col d-flex justify-content-center"><a class="" href="#">Bedroom</a>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Bedroom</a>
                                     </div>
-                                    <div class="col d-flex justify-content-center"><a class="" href="#">Dining Room</a>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Dining Room</a>
                                     </div>
-                                    <div class="col d-flex justify-content-center"><a class="" href="#">Bathroom</a>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Bathroom</a>
                                     </div>
-                                    <div class="col d-flex justify-content-center"><a class="" href="#">Living Room</a>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Living Room</a>
                                     </div>
-                                    <div class="col d-flex justify-content-center"><a class="" href="#">Office</a></div>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Office</a></div>
                                 </div>
                             </div>
                         </ul>
                     </li>
                 </ul>
             </div>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+            <form method="GET" action="" class="d-flex">
+                <div class="input-group w-100">
+                    <input class="form-control me-2" type="text" name="q" placeholder="What is your Vision?"
+                        aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-outline-success" type="submit">
+                            <span class=""><i class="fas fa-search"></i></span>
+                        </button>
+                    </div>
+                </div>
             </form>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-black">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
@@ -120,13 +130,13 @@
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="">
-                            <div class="text-center">
+                            <div class="text-center text-black">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
+                                    £{{ grand_total|floatformat:2 }}
                                     {% else %}
-                                    $0.00
+                                    £0.00
                                     {% endif %}
                                 </p>
                             </div>
@@ -137,13 +147,18 @@
         </div>
     </nav>
 
+    {% block page_header %}
+    {% endblock %}
+
     {% block content %}
     {% endblock %}
 
     {% block postloadjs %}
     {% endblock %}
+
+    
 </body>
 
 
-
+</html>
 
