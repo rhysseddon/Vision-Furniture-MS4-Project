@@ -1,6 +1,24 @@
 from django.contrib import admin
 from .models import Product, Room
 
-admin.site.register(Product)
-admin.site.register(Room)
+
+class ProductAdmin(admin.ModelAdmin):
+    list_display = (
+        'sku',
+        'name',
+        'price',
+    )
+
+    ordering = ('sku',)
+
+
+class RoomAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+
+admin.site.register(Product, ProductAdmin)
+admin.site.register(Room, RoomAdmin)
 
