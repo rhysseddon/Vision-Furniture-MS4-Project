@@ -51,15 +51,15 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top"></header>
+    <header class="fixed-top">
+    
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            
-            <a class="navbar-brand" href="{% url 'home' %}"><img src="media/vision-logo.png" class="img-fluid" alt="..."></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="media/vision-logo.png" class="logo-image" alt="..."></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -75,7 +75,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Shop By Room
                         </a>
-                        <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                        <ul class="dropdown-menu w-100 horizontal-dropdown" aria-labelledby="navbarDropdown">
                             <div class="dropdown-item">
                                 <div class="row">
                                     <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Bedroom</a>
@@ -91,26 +91,40 @@
                             </div>
                         </ul>
                     </li>
+                    {% include 'includes/mobile-top-header.html' %}
                 </ul>
             </div>
+            <div class="d-none d-lg-block">
             <form method="GET" action="" class="d-flex">
                 <div class="input-group w-100">
                     <input class="form-control me-2" type="text" name="q" placeholder="What is your Vision?"
                         aria-label="Search">
                     <div class="input-group-append">
                         <button class="form-control btn btn-outline-success" type="submit">
-                            <span class=""><i class="fas fa-search"></i></span>
+                            <span class="icon"><i class="fas fa-search"></i></span>
                         </button>
                     </div>
                 </div>
             </form>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-black">
+            </div>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-black d-none d-lg-block">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+                    <li class="list-inline-item">
+                        <a class="nav-link"
+                            href="">
+                            <div class="text-center text-black">
+                                <div><i class="far fa-heart fa-lg"></i></div>
+                                <p class="my-0">
+                                    Favorites
+                                </p>
+                            </div>
+                        </a>
+                    </li>
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <div><i class="far fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
@@ -131,7 +145,7 @@
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="">
                             <div class="text-center text-black">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <div><i class="fas fa-shopping-cart fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
@@ -146,7 +160,8 @@
             </div>
         </div>
     </nav>
-
+    {% include 'includes/searchbar.html' %}
+</header>
     {% block page_header %}
     {% endblock %}
 

@@ -10,17 +10,19 @@ nav a {
     color: black;
 }
 
+.logo-image {
+    width: 200px;
+}
+
 .btn-outline-success {
     color: black;
     border-color: black;
 }
 
-
-
 /* The hero image */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  height: 50%;
+  height: 40%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -34,4 +36,80 @@ nav a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+.hero-title {
+    font-size: 45px;
+    padding-top: 80px;
+}
+
+.horizontal-dropdown {
+    margin-top: 0px;
+}
+/* from Bulma for icons*/
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.header-container {
+    padding-top: 50px;
+}
+
+/* Button styling  */
+
+.btns {
+color: #ffffff !important;
+background: #000000;
+padding: 10px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+font-size: 15px;
+}
+
+.btns:hover {
+color: #ffffff !important;
+border-radius: 50px;
+transition: all 0.3s ease 0s;
+text-decoration: none;
+}
+
+
+/* Tablet view */
+@media (max-width: 1000px) {
+.hero-title {
+    font-size: 35px;
+    padding-top: 70px;
+}
+.logo-image {
+    width: 120px;
+}
+.header-container {
+    padding-top: 120px;
+}
+}
+
+/* Mobile view */
+@media (max-width: 500px) {
+.hero-title {
+    font-size: 25px;
+    padding-top: 77px;
+}
+.logo-image {
+    width: 120px;
+}
+.header-container {
+    padding-top: 115px;
+}
 }
