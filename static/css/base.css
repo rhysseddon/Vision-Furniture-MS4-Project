@@ -57,6 +57,7 @@ nav a {
 .horizontal-dropdown {
     margin-top: 0px;
 }
+
 /* from Bulma for icons*/
 .icon {
     align-items: center;
@@ -74,6 +75,10 @@ nav a {
     border: 1px solid black !important;
 }
 
+.main-heading-padding {
+    padding-bottom: 20px;
+}
+
 .product-box {
     border-color: black;
     padding: 50px 60px;
@@ -83,8 +88,8 @@ nav a {
 .fav-icon {
     text-align: right;
 }
-/* Button styling  */
 
+/* Button styling  */
 .btns {
 color: #ffffff !important;
 background: #000000;
@@ -95,18 +100,17 @@ font-size: 15px;
 }
 
 .btns:hover {
-color: #ffffff !important;
 border-radius: 50px;
 transition: all 0.3s ease 0s;
 text-decoration: none;
 }
 
-.help-btn {
+.help-btn-padding {
     padding-right: 40px;
 }
 
-.main-heading-padding {
-    padding-bottom: 20px;
+.help-btn-style{
+    background-color: rgb(226, 27, 27);
 }
 
 .footer-style {
@@ -116,13 +120,19 @@ text-decoration: none;
 .social-icons {
     font-size: 60px;
     padding-left: 70px;
+    color: #000;
 }
+.insta {
+    color: #e1306c;
+}
+
 /* Tablet view */
-@media (max-width: 1000px) {
+@media (max-width: 1030px) {
 .hero-title {
     font-size: 35px;
     padding-top: 70px;
 }
+
 .logo-image {
     width: 120px;
 }
@@ -135,6 +145,11 @@ text-decoration: none;
     padding: 20px 30px;
 }
 
+.social-icons {
+    font-size: 50px;
+    padding-left: 30px;
+}
+
 }
 
 /* Mobile view */
@@ -143,6 +158,7 @@ text-decoration: none;
     font-size: 25px;
     padding-top:180px;
 }
+
 .logo-image {
     width: 120px;
 }
