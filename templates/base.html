@@ -162,12 +162,27 @@
     </nav>
     {% include 'includes/searchbar.html' %}
 </header>
+
     {% block page_header %}
     {% endblock %}
 
     {% block content %}
     {% endblock %}
 
+    <footer>
+    <div class="container-fluid bg-light footer-style">
+        <div class="row">
+            <div class="col col-lg-4 social-icons">
+                <i class="fab fa-facebook-square "></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-twitter-square"></i>
+            </div>
+            <div class="col col-lg-4 offset-md-4 text-right my-auto help-btn">
+                <button class="btns">Need Help? <i class="fas fa-bullhorn"></i></button>
+            </div>
+        </div>
+    </div>
+</footer> 
     {% block postloadjs %}
     {% endblock %}
 

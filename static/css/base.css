@@ -6,14 +6,17 @@ body {
     font-family: 'Shippori Mincho B1', serif;
 }
 
+/* Adds padding to content to stop nav overlapping */
 .nav-padding {
     padding-top: 150px;
 }
 
+/* Colour navbar links */
 nav a {
     color: black;
 }
 
+/* Sizes logo */
 .logo-image {
     width: 200px;
 }
@@ -98,8 +101,21 @@ transition: all 0.3s ease 0s;
 text-decoration: none;
 }
 
+.help-btn {
+    padding-right: 40px;
+}
+
 .main-heading-padding {
     padding-bottom: 20px;
+}
+
+.footer-style {
+    height: 100px;
+}
+
+.social-icons {
+    font-size: 60px;
+    padding-left: 70px;
 }
 /* Tablet view */
 @media (max-width: 1000px) {
@@ -132,5 +148,14 @@ text-decoration: none;
 }
 .home-nav-padding {
     padding-top: 95px;
+}
+
+.social-icons {
+    font-size: 40px;
+    padding-left: 30px;
+}
+
+.footer-style {
+    height: 60px;
 }
 }
