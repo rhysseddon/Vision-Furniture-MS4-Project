@@ -6,6 +6,10 @@ body {
     font-family: 'Shippori Mincho B1', serif;
 }
 
+.nav-padding {
+    padding-top: 150px;
+}
+
 nav a {
     color: black;
 }
@@ -43,6 +47,10 @@ nav a {
     padding-top: 80px;
 }
 
+.home-nav-padding {
+    padding-top: 70px;
+}
+
 .horizontal-dropdown {
     margin-top: 0px;
 }
@@ -63,10 +71,15 @@ nav a {
     border: 1px solid black !important;
 }
 
-.header-container {
-    padding-top: 50px;
+.product-box {
+    border-color: black;
+    padding: 50px 60px;
+    margin-bottom: 30px;
 }
 
+.fav-icon {
+    text-align: right;
+}
 /* Button styling  */
 
 .btns {
@@ -85,7 +98,9 @@ transition: all 0.3s ease 0s;
 text-decoration: none;
 }
 
-
+.main-heading-padding {
+    padding-bottom: 20px;
+}
 /* Tablet view */
 @media (max-width: 1000px) {
 .hero-title {
@@ -95,21 +110,27 @@ text-decoration: none;
 .logo-image {
     width: 120px;
 }
-.header-container {
-    padding-top: 120px;
+
+.home-nav-padding {
+    padding-top: 90px;
 }
+
+.product-box {
+    padding: 20px 30px;
+}
+
 }
 
 /* Mobile view */
 @media (max-width: 500px) {
 .hero-title {
     font-size: 25px;
-    padding-top: 77px;
+    padding-top:180px;
 }
 .logo-image {
     width: 120px;
 }
-.header-container {
-    padding-top: 115px;
+.home-nav-padding {
+    padding-top: 95px;
 }
 }

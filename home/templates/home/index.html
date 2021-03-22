@@ -1,23 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">
-
-            </div>
-        </div>
-    </div>
-{% endblock %}
-
 {% block content %}
 <div class="hero-image">
-<img src="media/main.jpg" class="img-fluid" alt="...">
+<img src="media/main.jpg" class="img-fluid home-nav-padding" alt="...">
 <div class="hero-text">
     <h1 class="hero-title">Vision Furniture</h1>
     <p>Refresh your space</p>
-    <div class="btn-cont" align="center"><a class="btns" href="" target="_blank">View Our Stock</a></div>
+    <div class="btn-cont" align="center"><a class="btns" href="{% url 'products' %}" target="_blank">View Our Stock</a></div>
 </div>
 </div>
 <div class="container-fluid">
