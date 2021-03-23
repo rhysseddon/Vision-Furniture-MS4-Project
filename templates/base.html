@@ -78,15 +78,18 @@
                         <ul class="dropdown-menu w-100 horizontal-dropdown" aria-labelledby="navbarDropdown">
                             <div class="dropdown-item">
                                 <div class="row">
-                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Bedroom</a>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="{% url 'products' %}?room=bed_room">Bedroom</a>
                                     </div>
-                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Dining Room</a>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="{% url 'products' %}?room=dining_room">Dining Room</a>
                                     </div>
-                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Bathroom</a>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="{% url 'products' %}?room=bath_room">Bathroom</a>
                                     </div>
-                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Living Room</a>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="{% url 'products' %}?room=living_room">Living Room</a>
                                     </div>
-                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="#">Office</a></div>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="{% url 'products' %}?room=kitchen">Kitchen</a>
+                                    </div>
+                                    <div class="col d-flex justify-content-center"><a class="shadow-none" href="{% url 'products' %}?room=office">Office</a>
+                                    </div>
                                 </div>
                             </div>
                         </ul>
