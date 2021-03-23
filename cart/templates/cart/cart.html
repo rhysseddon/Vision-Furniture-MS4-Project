@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid nav-padding">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="main-heading-padding">Shopping Cart</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {% if bag_items %}
+            <div class="table-responsive rounded"></div>
+            {% else %}
+            <p class="lead mb-5">Your bag is empty.</p>
+            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                <span class="icon">
+                    <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <p>Product</p>
+        </div>
+        <div class="col-2">
+            <p>Price</p>
+        </div>
+        <div class="col-2">
+            <p>Quantity</p>
+        </div>
+        <div class="col-2">
+            <p>Total</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-4">
+            <p>Product</p>
+        </div>
+        <div class="col-2">
+            <p>Price</p>
+        </div>
+        <div class="col-2">
+            <p>Quantity</p>
+        </div>
+        <div class="col-2">
+            <p>Total</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-6">
+            Delivery Total:
+        </div>
+        <div class="col-6">
+            Subtotal
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            Grand Total
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            Checkout button
+        </div>
+    </div>
+</div>
+{% endblock %}
