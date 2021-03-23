@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid nav-padding">
+    <div class="row">
+        <div class="col-10 offset-1 product-box">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    {% if product.image %}
+                    <a href="{{ product.image.url }}" target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="">
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 my-auto">
+                    <p>{{ product.name }}</p>
+                    <p>£{{ product.price }}</p>
+                    <p>{{ product.description }}</p>
+                    <p>Dimensions: {{ product.depth }}cm x {{ product.height }}cm x {{ product.width }}cm</p>
+                    <p>Delivery Cost: £{{ product.delivery_cost }}</p>
+                    <button class="btns">Add to cart <i class="fas fa-shopping-cart fa-lg"></i></button>
+                    <div class="fav-icon"><i class="far fa-heart fa-lg"></i></div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
