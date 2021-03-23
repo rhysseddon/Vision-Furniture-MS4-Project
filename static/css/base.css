@@ -107,13 +107,25 @@ text-decoration: none;
 }
 
 .help-btn-padding {
-    padding-right: 40px;
+    padding-right: 60px;
 }
 
 .help-btn-style{
     background-color: rgb(226, 27, 27);
 }
 
+.up-btn {
+    height: 35px;
+    width: 35px;
+    position: fixed;
+    bottom: 10px;
+    right: 5px;
+    border-radius: 50%;
+}
+
+.upbtn-link {
+    cursor: pointer;
+}
 .footer-style {
     height: 100px;
 }
