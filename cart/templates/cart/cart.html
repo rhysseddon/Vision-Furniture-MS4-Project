@@ -49,20 +49,20 @@
     <hr>
     {% endfor %}
     <div class="row">
-        <div class="col-6">
-            Delivery Total:
+        <div class="col-2 offset-8 text-center">
+            <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
         </div>
-        <div class="col-6">
-            Subtotal
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-            Grand Total
+        <div class="col-2 text-center">
+            <h6><strong>Sub total: £{{ sub_total|floatformat:2 }}</strong></h6>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 text-center">
+        <div class="col-4 offset-8 text-center">
+            <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-5 offset-7 mt-3">
             <a href="{% url 'products' %}"
                 class="btn btn-outline-black rounded-0 btn-lg">
                 <span class="icon">
