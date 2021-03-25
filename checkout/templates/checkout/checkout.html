@@ -2,6 +2,10 @@
 {% load static %}
 {% load cart_tools %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="container-fluid nav-padding">
     <div class="row">
@@ -21,21 +25,61 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-4 offset-2 text-center mt-3">
-            <a href="" class="btns">Register</a>
+        <div class="col-2 offset-4 text-center mt-3">
+            <a href="" class="btns">Register <i class="fas fa-user-plus"></i></a>
         </div>
-        <div class="col-4 text-center mt-3">
-            <a href="" class="btns">Login</a>
+        <div class="col-2 text-center mt-3">
+            <a href="" class="btns">Login <i class="fas fa-sign-in-alt"></i></a>
         </div>
     </div>
     <div class="row">
         <div class="col text-center mt-3">
-            <p>In a hurry? Fast checkout below</p>
+            <p>In a hurry? Checkout below</p>
         </div>
     </div>
     {% endif %}
     <div class="row">
-            <div class="col-6">
+        <div class="col-md-6 col-sm-12 order-md-last">
+            <p>Order Summary</p>
+            {% for item in cart_items %}
+                <div class="row">
+                    <div class="col-2 mb-1">
+                        <a href="{% url 'product_details' item.product.id %}">
+                            {% if item.product.image %}
+                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                            {% else %}
+                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                            {% endif %}
+                        </a>
+                    </div>
+                    <div class="col-7">
+                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                    </div>
+                </div>
+                <hr>
+            {% endfor %}
+            <div class="row text-black text-right">
+                <div class="col-7 offset-2">
+                    <p class="my-0">Sub Total:</p>
+                    <p class="my-0">Delivery:</p>
+                    <hr>
+                    <p class="my-0">Grand Total:</p>
+                    <hr>
+                </div>
+                <div class="col-3">
+                    <p class="my-0">£{{ sub_total | floatformat:2 }}</p>
+                    <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                    <hr>
+                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
                 <p>Delivery information</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
@@ -91,42 +135,13 @@
 					</div>
                 </form>
             </div>
-        <div class="col-6">
-            <p>Order Summary</p>
-            {% for item in cart_items %}
-                <div class="row">
-                    <div class="col-2 mb-1">
-                        <a href="{% url 'product_details' item.product.id %}">
-                            {% if item.product.image %}
-                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                            {% else %}
-                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                            {% endif %}
-                        </a>
-                    </div>
-                    <div class="col-7">
-                        <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                        <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="my-0 small text-muted">${{ item.product.price | calc_subtotal:item.quantity }}</p>
-                    </div>
-                </div>
-                <hr>
-            {% endfor %}
-            <div class="row text-black text-right">
-                <div class="col-7 offset-2">
-                    <p class="my-0">Order Total:</p>
-                    <p class="my-0">Delivery:</p>
-                    <p class="my-0">Grand Total:</p>
-                </div>
-                <div class="col-3">
-                    <p class="my-0">${{ total | floatformat:2 }}</p>
-                    <p class="my-0">${{ delivery | floatformat:2 }}</p>
-                    <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
