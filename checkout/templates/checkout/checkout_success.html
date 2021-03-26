@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid nav-padding">
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h2 class="main-heading-padding">Thankyou!</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 offset-4 pb-5">
+            <img class="img-fluid" src="{{ MEDIA_URL }}underline.png" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center mt-3">
+            <h4>Order Information:</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <p>A confirmation email will be sent to <strong>{{ order.email }}</strong></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1 product-box">
+ 
+        </div>
+        <div class="col-4 offset-4 text-center">
+            <a class="btns" href="{% url 'products' %}"><i class="fas fa-arrow-left"></i> Return to shop </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
