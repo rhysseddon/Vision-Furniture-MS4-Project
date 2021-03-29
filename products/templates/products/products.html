@@ -23,8 +23,8 @@
     <div class="row mt-1 mb-2">
         <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
             <div class="sort-select-wrapper w-50">
-                <select id="sort-dropdown" 
-                class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                <select id="sort-dropdown"
+                    class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to
                         high)</option>
@@ -40,8 +40,8 @@
         {% if search_term != 'None_None' %}
         <div class="col-12 col-md-6 order-md-first">
             <p class="text-muted mt-3 text-center text-md-left">
-            {{ products|length }} Products{% if search_term %} found for
-            <strong>"{{ search_term }}"</strong>{% endif %}
+                {{ products|length }} Products{% if search_term %} found for
+                <strong>"{{ search_term }}"</strong>{% endif %}
             </p>
         </div>
         {% endif %}
@@ -65,8 +65,15 @@
                         <div class="card-body text-center">
                             <p>{{ product.name }}</p>
                             <p>£{{ product.price }}</p>
-                            <a href="{% url 'product_details' product.id %}" class="btns">View Item <i class="fas fa-binoculars fa-lg"></i></a>
+                            <a href="{% url 'product_details' product.id %}" class="btns">View Item <i
+                                    class="fas fa-binoculars fa-lg"></i></a>
                         </div>
+                        {% if request.user.is_superuser %}
+                        <small class="text-center">
+                            <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                            <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </small>
+                        {% endif %}
                         <div class="fav-icon"><i class="far fa-heart fa-lg"></i></div>
                     </div>
                 </div>
@@ -75,41 +82,41 @@
         </div>
     </div>
 </div>
-    <div class="up-btn shadow-sm border border-black bg-white">
-        <a class="upbtn-link d-flex h-100">
-            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-        </a>	
-    </div>
+<div class="up-btn shadow-sm border border-black bg-white">
+    <a class="upbtn-link d-flex h-100">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript">
-		$('.upbtn-link').click(function(e) {
-			window.scrollTo(0,0)
-		})
-	</script>
-    
-    <script type="text/javascript">
-        $('#sort-dropdown').change(function() {
-            let selector = $(this);
-            let currentUrl = new URL(window.location);
+{{ block.super }}
+<script type="text/javascript">
+    $('.upbtn-link').click(function (e) {
+        window.scrollTo(0, 0)
+    })
+</script>
 
-            let valSelected = selector.val();
-            if(valSelected != "reset"){
-                let sort = valSelected.split("_")[0];
-                let direction = valSelected.split("_")[1];
+<script type="text/javascript">
+    $('#sort-dropdown').change(function () {
+        let selector = $(this);
+        let currentUrl = new URL(window.location);
 
-                currentUrl.searchParams.set("sort", sort);
-                currentUrl.searchParams.set("direction", direction);
+        let valSelected = selector.val();
+        if (valSelected != "reset") {
+            let sort = valSelected.split("_")[0];
+            let direction = valSelected.split("_")[1];
 
-                window.location.replace(currentUrl);
-            } else {
-                currentUrl.searchParams.delete("sort");
-                currentUrl.searchParams.delete("direction");
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
 
-                window.location.replace(currentUrl);
-            }
-        })
-    </script>
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}
