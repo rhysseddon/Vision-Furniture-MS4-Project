@@ -4,9 +4,19 @@
 
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Sign Out" %}</h1>
+{% block inner_content %}
 
+<div class="container-fluid">
+    <div class="row">
+    <div class="col text-center mt-3">
+        <h2 class="main-heading-padding">{% trans "Sign Out" %}</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4 offset-4 pb-5">
+        <img class="img-fluid" src="{{ MEDIA_URL }}underline.png" alt="">
+    </div>
+</div>
 <p>{% trans 'Are you sure you want to sign out?' %}</p>
 
 <form method="post" action="{% url 'account_logout' %}">
@@ -14,7 +24,7 @@
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
   {% endif %}
-  <button type="submit">{% trans 'Sign Out' %}</button>
+  <button class="btns" type="submit">{% trans 'Sign Out' %}</button>
 </form>
 
 
