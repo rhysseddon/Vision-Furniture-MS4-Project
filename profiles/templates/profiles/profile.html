@@ -9,7 +9,7 @@
     <div class="container-fluid nav-padding">
         <div class="row">
         <div class="col text-center mt-3">
-            <h2 class="main-heading-padding"> My Profile</h2>
+            <h2 class="main-heading-padding">My Profile</h2>
         </div>
     </div>
     <div class="row">
@@ -17,6 +17,28 @@
             <img class="img-fluid" src="{{ MEDIA_URL }}underline.png" alt="">
         </div>
     </div>
-    {{ profile }}
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2">
+            <h4 class="text-center mb-3">Your Delivery Information </h4>
+            <form class="" action="{% url 'profile' %}" method="POST" id="profile-update-form">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <div class="text-center mb-3">
+                    <button class="btns">Update Information</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-10 offset-1">
+                <h4 class="text-center">Order History</h4>
+                {{ orders }}
+        </div>
+    </div>
 
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
