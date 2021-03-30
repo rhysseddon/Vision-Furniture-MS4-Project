@@ -71,10 +71,11 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6 offset-3">
-                            <a class="update-link text-info"><small>Update</small></a>
-                            <a class="remove-item text-danger float-right"
-                                id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                        <div class="col-3 offset-3 text-center">
+                            <button class="update-link btns btn-sm" type="submit">Update</button>
+                        </div>
+                        <div class="col-3 ml-0 text-center">
+                            <button class="remove-item btns btn-sm" id="remove_{{ item.item_id }}">Remove</button>
                         </div>
                     </div>
                 </div>
@@ -84,59 +85,61 @@
             <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
         </div>
     </div>
-    <hr>
-    {% endfor %}
-    <div class="row">
-        <div class="col-2 offset-6 text-center delivery-link">
-            <a href=""><h6>See our delivery policy</h6></a>
-        </div>
-        <div class="col-2 text-center">
-            <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-        </div>
-        <div class="col-2 text-center">
-            <h6><strong>Sub total: £{{ sub_total|floatformat:2 }}</strong></h6>
-        </div>
+</div>
+<hr>
+{% endfor %}
+<div class="row">
+    <div class="col-2 offset-6 text-center delivery-link">
+        <a href="">
+            <h6>See our delivery policy</h6>
+        </a>
     </div>
-    <div class="row">
-        <div class="col-4 offset-8 text-center">
-            <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-        </div>
+    <div class="col-2 text-center">
+        <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
     </div>
-    <div class="row">
-        <div class="col-5 offset-7 mt-3">
-            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
-            <a href="{% url 'checkout' %}" class="btns">
-                <span class="text-uppercase">Secure Checkout</span>
-                <span class="icon">
-                    <i class="fas fa-lock"></i>
-                </span>
-            </a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            {% else %}
-            <p class="lead mb-5">Your cart is empty.</p>
-            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
-            {% endif %}
-        </div>
+    <div class="col-2 text-center">
+        <h6><strong>Sub total: £{{ sub_total|floatformat:2 }}</strong></h6>
     </div>
 </div>
+<div class="row">
+    <div class="col-4 offset-8 text-center">
+        <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 offset-7 mt-3">
+        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+        </a>
+        <a href="{% url 'checkout' %}" class="btns">
+            <span class="text-uppercase">Secure Checkout</span>
+            <span class="icon">
+                <i class="fas fa-lock"></i>
+            </span>
+        </a>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        {% else %}
+        <p class="lead mb-5">Your cart is empty.</p>
+        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+        </a>
+        {% endif %}
+    </div>
+</div>
+
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
-{% include 'products/includes/quantity_update_script.html' %}
 
 {% endblock %}
