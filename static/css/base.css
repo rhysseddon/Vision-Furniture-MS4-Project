@@ -4,6 +4,7 @@ html {
 
 body {
     font-family: 'Shippori Mincho B1', serif;
+    height: 100%;
 }
 
 /* Adds padding to content to stop nav overlapping */
@@ -29,7 +30,6 @@ nav a {
 /* The hero image */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  height: 40%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -39,7 +39,7 @@ nav a {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -106,9 +106,6 @@ transition: all 0.3s ease 0s;
 text-decoration: none;
 }
 
-.help-btn-padding {
-    padding-right: 60px;
-}
 
 .help-btn-style{
     background-color: rgb(226, 27, 27);
@@ -129,12 +126,12 @@ text-decoration: none;
     cursor: pointer;
 }
 .footer-style {
+    position: relative;
     height: 100px;
+    margin-bottom: 0;
 }
 
 .social-icons {
-    font-size: 50px;
-    padding-left: 70px;
     color: #000;
 }
 .insta {

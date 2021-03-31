@@ -4,6 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from django_countries.fields import CountryField
+from products.models import Product
 
 
 class UserProfile(models.Model):
@@ -22,6 +23,16 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+class Favorites(models.Model):
+    """
+    A model for user to add favorites
+    """
+    user = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                null=True, blank=True)
+    product = models.ForeignKey(Product, on_delete=models.SET_NULL,
+                                null=True, blank=True)
 
 
 @receiver(post_save, sender=User)
