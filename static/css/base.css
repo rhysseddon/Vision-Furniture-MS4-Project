@@ -214,6 +214,23 @@ text-decoration: none;
     text-decoration: underline;
 }
 
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
 /* Tablet view */
 @media (max-width: 1030px) {
 .hero-title {
