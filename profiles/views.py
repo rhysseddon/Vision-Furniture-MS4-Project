@@ -56,16 +56,16 @@ def view_favorites(request):
     return render(request, 'profiles/favorites.html')
 
 
-def add_to_favorites(request, product):
+def add_to_favorites(request, item_id):
     """ Add products to the favorites page """
     redirect_url = request.POST.get('redirect_url')
     favorites = request.session.get('favorites', {})
 
-    if product in list(favorites.keys()):
-        favorites[product]
+    if item_id in list(favorites.keys()):
+        favorites[item_id] = 1
         # message already added
     else:
-        favorites[product]
+        favorites[item_id] = 1
         # message added to favorites
     request.session['favorites'] = favorites
     print(request.session['favorites'])

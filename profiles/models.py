@@ -37,7 +37,7 @@ class Favorites(models.Model):
     def __str__(self):
         return self.product.name
 
-    
+
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
