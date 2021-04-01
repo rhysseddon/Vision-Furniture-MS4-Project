@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
@@ -48,3 +48,25 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def view_favorites(request):
+    """ A view that will render the favorites page """
+
+    return render(request, 'profiles/favorites.html')
+
+
+def add_to_favorites(request, product):
+    """ Add products to the favorites page """
+    redirect_url = request.POST.get('redirect_url')
+    favorites = request.session.get('favorites', {})
+
+    if product in list(favorites.keys()):
+        favorites[product]
+        # message already added
+    else:
+        favorites[product]
+        # message added to favorites
+    request.session['favorites'] = favorites
+    print(request.session['favorites'])
+    return redirect(redirect_url)

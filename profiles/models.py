@@ -34,7 +34,10 @@ class Favorites(models.Model):
     product = models.ForeignKey(Product, on_delete=models.SET_NULL,
                                 null=True, blank=True)
 
+    def __str__(self):
+        return self.product.name
 
+    
 @receiver(post_save, sender=User)
 def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
