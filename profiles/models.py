@@ -29,7 +29,8 @@ class Favorites(models.Model):
     """
     A model for user to add favorites
     """
-    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, null=False, blank=False)
+    user = models.ForeignKey(
+        UserProfile, on_delete=models.CASCADE, null=False, blank=False)
     favorites = models.ManyToManyField(Product, related_name='favorites')
 
     def __str__(self):

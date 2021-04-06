@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
@@ -71,10 +71,13 @@ def add_to_favorites(request, product_id):
 
     if created:
         favorite.favorites.add(favorites_user.id)
+        messages.info(request, 'Added product to favorites!')
     else:
         if favorite in favorites:
             favorite.favorites.remove(favorites_user.id)
+            messages.info(request, 'Removed product from favorites!')
         else:
             favorite.favorites.add(favorites_user.id)
+            messages.info(request, 'Added product to favorites!')
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
