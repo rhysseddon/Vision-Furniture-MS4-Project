@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseRedirect
 
-
-from .models import UserProfile
+from .models import UserProfile, Favorites
 from .forms import UserProfileForm
+from products.models import Product
 
 from checkout.models import Order
 
@@ -52,21 +53,28 @@ def order_history(request, order_number):
 
 def view_favorites(request):
     """ A view that will render the favorites page """
+    user = UserProfile.objects.get(user=request.user)
+    favorites = Product.objects.filter(favorites__user=user)
+    context = {
+        'favorites': favorites,
+    }
+    return render(request, 'profiles/favorites.html', context)
 
-    return render(request, 'profiles/favorites.html')
 
-
-def add_to_favorites(request, item_id):
+def add_to_favorites(request, product_id):
     """ Add products to the favorites page """
-    redirect_url = request.POST.get('redirect_url')
-    favorites = request.session.get('favorites', {})
+    favorite = get_object_or_404(Product, pk=product_id)
+    user = UserProfile.objects.get(user=request.user)
+    favorites_user, created = Favorites.objects.get_or_create(
+        user=user)
+    favorites = Product.objects.filter(favorites__user=user)
 
-    if item_id in list(favorites.keys()):
-        favorites[item_id] = 1
-        # message already added
+    if created:
+        favorite.favorites.add(favorites_user.id)
     else:
-        favorites[item_id] = 1
-        # message added to favorites
-    request.session['favorites'] = favorites
-    print(request.session['favorites'])
-    return redirect(redirect_url)
+        if favorite in favorites:
+            favorite.favorites.remove(favorites_user.id)
+        else:
+            favorite.favorites.add(favorites_user.id)
+
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))

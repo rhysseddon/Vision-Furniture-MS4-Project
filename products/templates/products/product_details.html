@@ -71,12 +71,17 @@
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
+                    {% if request.user.is_authenticated %}
                     <form class="form" action="{% url 'add_to_favorites' product.id %}" method="POST">
                         {% csrf_token %}
                         <input type="hidden" data-item_id="{{ product.id }}">
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                        <button type="submit">Add to favorites</button>
+                        {% if on_favorites %}
+                            <button type="submit">Remove from favorites</button>
+                        {% else %}
+                            <button type="submit">Add to favorites</button>
+                        {% endif %}
                     </form>
+                    {% endif %}
                     <!-- <div class="fav-icon"><i class="far fa-heart fa-lg"></i></div> -->
                 </div>
             </div>
