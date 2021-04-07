@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid nav-padding">
+<div class="container-fluid min-vh-100 nav-padding">
     <div class="row">
         <div class="col-10 offset-1 product-box">
             <div class="row">
@@ -19,6 +19,12 @@
                 </div>
                 <div class="col-12 col-md-6 col-lg-6 my-auto">
                     <h3>{{ product.name }}</h3>
+                    {% if request.user.is_superuser %}
+                    <small class="text-center">
+                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                    </small>
+                    {% endif %}
                     <p>£{{ product.price }}</p>
                     <p>{{ product.description }}</p>
                     <p>Dimensions: {{ product.depth }}cm x {{ product.height }}cm x {{ product.width }}cm</p>
@@ -54,31 +60,24 @@
                             </div>
                             <button type="submit" class="btns">Add to cart <i
                                     class="fas fa-shopping-cart fa-lg"></i></button>
-                            <div class="col-12">
-                                {% if request.user.is_superuser %}
-                                <small class="text-center">
-                                    <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                </small>
-                                {% endif %}
-                                <a href="{% url 'products' %}" class="btn rounded-0 mt-5">
-                                    <span class="icon">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="text-uppercase">Keep Shopping</span>
-                                </a>
-                            </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
                     </form>
+
+                    <a href="{% url 'products' %}" class="btn rounded-0 mt-5">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span class="text-uppercase">Keep Shopping</span>
+                    </a>
                     {% if request.user.is_authenticated %}
-                    <form class="form" action="{% url 'add_to_favorites' product.id %}" method="POST">
+                    <form class="form text-right" action="{% url 'add_to_favorites' product.id %}" method="POST">
                         {% csrf_token %}
                         <input type="hidden" data-item_id="{{ product.id }}">
                         {% if favorite in favorites %}
-                            <button type="submit"><i class="fas fa-heart fa-lg"></i></button>
+                            <button class="btns" type="submit"><i class="fas fa-heart fa-lg"></i></button>
                         {% else %}
-                            <button type="submit"><i class="far fa-heart fa-lg"></i></button>
+                            <button class="btns" type="submit"><i class="far fa-heart fa-lg"></i></button>
                         {% endif %}
                     </form>
                     {% endif %}

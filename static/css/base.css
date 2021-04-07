@@ -120,6 +120,11 @@ text-decoration: none;
     cursor: pointer;
 }
 
+.update-link {
+    padding: 8px;
+}
+
+
 .help-btn-style{
     background-color: #d36060;
 }
