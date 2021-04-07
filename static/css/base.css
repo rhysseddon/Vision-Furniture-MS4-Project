@@ -12,14 +12,18 @@ body {
     padding-top: 150px;
 }
 
-/* Colour navbar links */
+/* Colours navbar */
 nav a {
     color: black;
 }
 
+.navbar-style {
+    background-color: #ebe9e9;
+}
+
 /* Sizes logo */
 .logo-image {
-    width: 200px;
+    width: 180px;
 }
 
 .btn-outline-success {
@@ -34,8 +38,7 @@ nav a {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  max-height: 99%;
-  
+  max-height: 100%;
 }
 
 .hero-text {
@@ -53,7 +56,9 @@ nav a {
 }
 
 .horizontal-dropdown {
-    margin-top: 0px;
+    margin-top: 0;
+    background-clip: border-box;
+    background-color: #ebe9e9;
 }
 
 /* from Bulma for icons*/
@@ -82,10 +87,6 @@ nav a {
     border-color: black;
     padding: 50px 60px;
     margin-bottom: 30px;
-}
-
-.fav-icon {
-    text-align: right;
 }
 
 /* Button styling  */
@@ -126,6 +127,7 @@ text-decoration: none;
 .footer-style {
     position: relative;
     padding:0px 20px;
+    background-color: #ebe9e9;
 }
 
 .social-icons {
@@ -227,6 +229,16 @@ text-decoration: none;
 /* Tablet view */
 @media (max-width: 1030px) {
 
+/* navbar links */
+nav a {
+    font-size: 12px;
+}
+
+/* Sizes logo */
+.logo-image {
+    width: 100px;
+}
+
 .hero-text {
   top: 40%;
 }
@@ -255,6 +267,12 @@ text-decoration: none;
 
 /* Mobile view */
 @media (max-width: 500px) {
+
+/* Sizes logo */
+.logo-image {
+    width: 70px;
+}
+
 .hero-text {
   top: 30%;
 }
@@ -262,6 +280,7 @@ text-decoration: none;
 .hero-button {
     font-size: 8px;
 }
+
 .hero-title {
     font-size: 22px;
 }
@@ -286,7 +305,6 @@ text-decoration: none;
 .help-btn-style{
     font-size: 10px;
 }
-
 }
 
 
@@ -302,3 +320,4 @@ text-decoration: none;
 }
 
 }
+
