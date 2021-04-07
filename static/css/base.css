@@ -40,13 +40,12 @@ nav a {
 
 .hero-text {
   position: absolute;
-  top: 30%;
+  top: 40%;
   color: white;
 }
 
 .hero-title {
     font-size: 45px;
-    padding-top: 80px;
 }
 
 .home-nav-padding {
@@ -228,9 +227,12 @@ text-decoration: none;
 /* Tablet view */
 @media (max-width: 1030px) {
 
+.hero-text {
+  top: 40%;
+}
+
 .hero-title {
     font-size: 35px;
-    padding-top: 70px;
 }
 
 .logo-image {
@@ -253,14 +255,25 @@ text-decoration: none;
 
 /* Mobile view */
 @media (max-width: 500px) {
+.hero-text {
+  top: 30%;
+}
+
+.hero-button {
+    font-size: 8px;
+}
 .hero-title {
-    font-size: 25px;
-    padding-top:180px;
+    font-size: 22px;
+}
+
+.refresh {
+    font-size: 12px;
 }
 
 .logo-image {
     width: 120px;
 }
+
 .home-nav-padding {
     padding-top: 95px;
 }
