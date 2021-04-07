@@ -29,19 +29,18 @@ nav a {
 
 /* The hero image */
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-image: url("/media/main.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  max-height: 99%;
+  
 }
 
 .hero-text {
-  text-align: center;
   position: absolute;
   top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
 }
 
@@ -106,11 +105,6 @@ transition: all 0.3s ease 0s;
 text-decoration: none;
 }
 
-
-.help-btn-style{
-    background-color: rgb(226, 27, 27);
-}
-
 .up-btn {
     height: 35px;
     width: 35px;
@@ -125,17 +119,20 @@ text-decoration: none;
 .remove-item {
     cursor: pointer;
 }
+
+.help-btn-style{
+    background-color: #d36060;
+}
+
 .footer-style {
     position: relative;
-    height: 100px;
-    margin-bottom: 0;
+    padding:0px 20px;
 }
 
 .social-icons {
     color: #000;
-}
-.insta {
-    color: #e1306c;
+    font-size: 50px;
+    padding-left: 10px;
 }
 
 /* bootstrap toasts */
@@ -230,6 +227,7 @@ text-decoration: none;
 
 /* Tablet view */
 @media (max-width: 1030px) {
+
 .hero-title {
     font-size: 35px;
     padding-top: 70px;
@@ -248,8 +246,7 @@ text-decoration: none;
 }
 
 .social-icons {
-    font-size: 50px;
-    padding-left: 30px;
+    padding-left: 10px;
 }
 
 }
@@ -270,10 +267,25 @@ text-decoration: none;
 
 .social-icons {
     font-size: 40px;
-    padding-left: 30px;
+    padding-left: 5px;
 }
 
-.footer-style {
-    height: 60px;
+.help-btn-style{
+    font-size: 10px;
 }
+
+}
+
+
+@media (max-width: 285px) {
+/* Galaxy fold view */
+
+.social-icons {
+    font-size: 30px;
+}
+
+.help-btn-style{
+    font-size: 8px;
+}
+
 }

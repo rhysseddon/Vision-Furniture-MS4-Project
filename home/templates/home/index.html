@@ -2,12 +2,13 @@
 {% load static %}
 
 {% block content %}
-<div class="hero-image">
-<img src="media/main.jpg" class="img-fluid home-nav-padding" alt="...">
-<div class="hero-text">
+<div class="container-fluid h-100 p-0">
+<div class="row h-100 hero-image home-nav-padding">
+<div class="col-4 offset-4 hero-text text-center">
     <h1 class="hero-title">Vision Furniture</h1>
     <p>Refresh your space</p>
     <div class="btn-cont" align="center"><a class="btns" href="{% url 'products' %}">View Our Stock</a></div>
+</div>
 </div>
 </div>
 {% endblock %}
