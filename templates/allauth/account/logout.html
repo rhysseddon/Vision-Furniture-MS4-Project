@@ -6,20 +6,20 @@
 
 {% block inner_content %}
 
-<div class="container-fluid">
-    <div class="row">
+<div class="container-fluid min-vh-100 w-100 p-0">
+    <div class="row w-100">
     <div class="col text-center mt-3">
         <h2 class="main-heading-padding">{% trans "Sign Out" %}</h2>
     </div>
 </div>
 <div class="row">
-    <div class="col-4 offset-4 pb-5">
+    <div class="col-4 offset-4 text-center pb-5">
         <img class="img-fluid" src="{{ MEDIA_URL }}underline.png" alt="">
     </div>
 </div>
-<p>{% trans 'Are you sure you want to sign out?' %}</p>
+<p class="text-center">{% trans 'Are you sure you want to sign out?' %}</p>
 
-<form method="post" action="{% url 'account_logout' %}">
+<form method="post" class="text-center" action="{% url 'account_logout' %}">
   {% csrf_token %}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
