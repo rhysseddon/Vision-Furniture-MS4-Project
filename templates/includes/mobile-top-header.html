@@ -1,4 +1,4 @@
-
+{% if request.user.is_authenticated %}
 <li class="list-inline-item d-lg-none">
     <a class="nav-link" href="{% url 'view_favorites' %}">
         <div class="text-center text-black">
@@ -9,6 +9,7 @@
         </div>
     </a>
 </li>
+{% endif %}
 <!-- Account -->
 <li class="list-inline-item dropdown d-lg-none">
     <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"

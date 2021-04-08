@@ -17,22 +17,22 @@
     {% if cart_items %}
     <div class="row">
         <div class="col-3 text-center">
-            <p>Product Info</p>
+            <p class="d-none d-md-block">Product Info</p>
         </div>
         <div class="col-3 text-center">
-            <p>Price</p>
+            <p class="d-none d-md-block">Price</p>
         </div>
         <div class="col-3 text-center">
-            <p>Quantity</p>
+            <p class="d-none d-md-block">Quantity</p>
         </div>
         <div class="col-3 text-center">
-            <p>Total</p>
+            <p class="d-none d-md-block">Total</p>
         </div>
     </div>
     <hr>
     {% for item in cart_items %}
     <div class="row">
-        <div class="col-3 text-center">
+        <div class="col-12 col-md-3 text-center">
             <p>{{ item.product.name }}</p>
             {% if item.product.image %}
             <img class="img-fluid w-25" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
@@ -40,10 +40,10 @@
             <img class="img-fluid w-25" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
             {% endif %}
         </div>
-        <div class="col-3 my-auto text-center">
+        <div class="col-12 col-md-3 my-auto text-center">
             <p>£{{ item.product.price }}</p>
         </div>
-        <div class="col-3 my-auto justify-content-center">
+        <div class="col-12 col-md-3 my-auto justify-content-center">
             <form class="form update-form" method="POST" action="{% url 'adjust_cart' item.item_id %}">
                 {% csrf_token %}
                 <div class="form-group">
@@ -81,7 +81,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-3 my-auto text-center">
+        <div class="col-12 col-md-3 my-auto text-center">
             <p>£{{ item.product.price | calc_subtotal:item.quantity }}</p>
         </div>
     </div>
@@ -89,25 +89,25 @@
 <hr>
 {% endfor %}
 <div class="row">
-    <div class="col-2 offset-6 text-center delivery-link">
+    <div class="col-6 col-md-2 offset-md-6 text-center delivery-link">
         <a href="">
             <h6>See our delivery policy</h6>
         </a>
     </div>
-    <div class="col-2 text-center">
+    <div class="col-6 col-md-2 text-center">
         <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
     </div>
-    <div class="col-2 text-center">
+    <div class="col-6 col-md-2 text-center">
         <h6><strong>Sub total: £{{ sub_total|floatformat:2 }}</strong></h6>
     </div>
 </div>
 <div class="row">
-    <div class="col-4 offset-8 text-center">
+    <div class="col-6 offset-6 col-md-4 offset-md-8 text-center">
         <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
     </div>
 </div>
 <div class="row">
-    <div class="col-5 offset-7 mt-3">
+    <div class="col-12 col-md-5 offset-md-7 mt-3">
         <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
             <span class="icon">
                 <i class="fas fa-chevron-left"></i>
