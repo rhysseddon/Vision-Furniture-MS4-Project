@@ -27,7 +27,7 @@ SECRET_KEY = '-+za_5@ubpas)8-9h+1hgp#_net%(+c(zg5s6np&o57842swex'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['vision-furniture.herohuapp.com', 'localhost']
+ALLOWED_HOSTS = ['vision-furniture.herokuapp.com', 'localhost']
 
 
 # Application definition
