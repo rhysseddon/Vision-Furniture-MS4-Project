@@ -81,6 +81,7 @@
         </div>
     </div>
 </div>
+
 <!-- Move to top button -->
 <div class="up-btn shadow-sm border border-black bg-white">
     <a class="upbtn-link d-flex h-100">
@@ -91,6 +92,8 @@
 
 {% block postloadjs %}
 {{ block.super }}
+
+<!-- Move to top button -->
 <script type="text/javascript">
     $('.upbtn-link').click(function (e) {
         window.scrollTo(0, 0)

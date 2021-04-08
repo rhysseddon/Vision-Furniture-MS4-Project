@@ -1,0 +1,220 @@
+[
+{
+  "model": "products.room",
+  "pk": 1,
+  "fields": {
+    "name": "bath_room",
+    "friendly_name": "Bathroom"
+  }
+},
+{
+  "model": "products.room",
+  "pk": 2,
+  "fields": {
+    "name": "bed_room",
+    "friendly_name": "Bedroom"
+  }
+},
+{
+  "model": "products.room",
+  "pk": 3,
+  "fields": {
+    "name": "office",
+    "friendly_name": "Office"
+  }
+},
+{
+  "model": "products.room",
+  "pk": 4,
+  "fields": {
+    "name": "kitchen",
+    "friendly_name": "Kitchen"
+  }
+},
+{
+  "model": "products.room",
+  "pk": 5,
+  "fields": {
+    "name": "dining_room",
+    "friendly_name": "Dining Room"
+  }
+},
+{
+  "model": "products.room",
+  "pk": 6,
+  "fields": {
+    "name": "living_room",
+    "friendly_name": "Living Room"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 1,
+  "fields": {
+    "room": 6,
+    "sku": "001",
+    "name": "Guilded Mirror",
+    "description": "Lovely hanging guilded mirror",
+    "price": "79.99",
+    "delivery_cost": "10.00",
+    "depth": "5.00",
+    "height": "90.00",
+    "width": "50.00",
+    "image_url": null,
+    "image": "pexels-mirror.jpg"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 2,
+  "fields": {
+    "room": 6,
+    "sku": "002",
+    "name": "Wing Chair",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat? Nesciunt unde molestiae iure in?",
+    "price": "325.00",
+    "delivery_cost": "25.00",
+    "depth": "100.00",
+    "height": "90.00",
+    "width": "90.00",
+    "image_url": null,
+    "image": "pexels-evg-culture-1148955.jpg"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 3,
+  "fields": {
+    "room": 6,
+    "sku": "003",
+    "name": "Vintage Lantern",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat? Nesciunt unde molestiae iure in?",
+    "price": "35.00",
+    "delivery_cost": "7.00",
+    "depth": "15.00",
+    "height": "45.00",
+    "width": "15.00",
+    "image_url": "https://www.pexels.com/photo/black-and-brown-lantern-on-table-6145852",
+    "image": "pexels-krish-chaitu-6145852.jpg"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 4,
+  "fields": {
+    "room": 6,
+    "sku": "004",
+    "name": "Chaise Lounge",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat?",
+    "price": "320.00",
+    "delivery_cost": "25.00",
+    "depth": "50.00",
+    "height": "90.00",
+    "width": "110.00",
+    "image_url": "https://www.pexels.com/photo/vintage-sofa-near-window-in-room-5824804/",
+    "image": "pexels-charlotte-may-5824804.jpg"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 5,
+  "fields": {
+    "room": 5,
+    "sku": "005",
+    "name": "Side Unit",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat?",
+    "price": "120.00",
+    "delivery_cost": "25.00",
+    "depth": "50.00",
+    "height": "100.00",
+    "width": "175.00",
+    "image_url": null,
+    "image": "pexels-charlotte-may-5824530.jpg"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 6,
+  "fields": {
+    "room": 3,
+    "sku": "006",
+    "name": "Desk",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat?",
+    "price": "220.00",
+    "delivery_cost": "25.00",
+    "depth": "50.00",
+    "height": "75.00",
+    "width": "175.00",
+    "image_url": null,
+    "image": "pexels-max-vakhtbovych-6186504.jpg"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 7,
+  "fields": {
+    "room": 4,
+    "sku": "009",
+    "name": "Stool",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat?",
+    "price": "35.00",
+    "delivery_cost": "7.00",
+    "depth": "30.00",
+    "height": "1.00",
+    "width": "30.00",
+    "image_url": null,
+    "image": "pexels-ｌａｒａ-ｓａｎｔｏｓ-3741149.jpg"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 9,
+  "fields": {
+    "room": 2,
+    "sku": "007",
+    "name": "Bedside table with lamp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat?",
+    "price": "45.00",
+    "delivery_cost": "7.00",
+    "depth": "40.00",
+    "height": "60.00",
+    "width": "40.00",
+    "image_url": null,
+    "image": "pexels-cats-coming-707579.jpg"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 16,
+  "fields": {
+    "room": 3,
+    "sku": "008",
+    "name": "Office Lamp",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat?",
+    "price": "85.50",
+    "delivery_cost": "10.00",
+    "depth": "15.00",
+    "height": "60.00",
+    "width": "15.00",
+    "image_url": null,
+    "image": "pexels-skylar-kang-6368845.jpg"
+  }
+},
+{
+  "model": "products.product",
+  "pk": 19,
+  "fields": {
+    "room": 1,
+    "sku": "010",
+    "name": "Towel hooks",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non, ipsum error delectus porro sit omnis labore quod atque veniam eligendi accusamus doloremque ratione veritatis quaerat?",
+    "price": "15.99",
+    "delivery_cost": "5.00",
+    "depth": "5.00",
+    "height": "7.00",
+    "width": "60.00",
+    "image_url": null,
+    "image": "pexels-karolina-grabowska-4210341_HVtVWdX.jpg"
+  }
+}
+]
