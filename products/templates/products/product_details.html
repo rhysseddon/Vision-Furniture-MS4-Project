@@ -65,19 +65,19 @@
                     </form>
 
                     <a href="{% url 'products' %}" class="btn rounded-0 mt-5">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Keep Shopping</span>
+                        <span class="icon">
+                            <i class="fas fa-chevron-left"></i>
+                        </span>
+                        <span class="text-uppercase">Keep Shopping</span>
                     </a>
                     {% if request.user.is_authenticated %}
                     <form class="form text-right" action="{% url 'add_to_favorites' product.id %}" method="POST">
                         {% csrf_token %}
                         <input type="hidden" data-item_id="{{ product.id }}">
                         {% if favorite in favorites %}
-                            <button class="btns" type="submit"><i class="fas fa-heart fa-lg"></i></button>
+                        <button class="btns" type="submit"><i class="fas fa-heart fa-lg"></i></button>
                         {% else %}
-                            <button class="btns" type="submit"><i class="far fa-heart fa-lg"></i></button>
+                        <button class="btns" type="submit"><i class="far fa-heart fa-lg"></i></button>
                         {% endif %}
                     </form>
                     {% endif %}

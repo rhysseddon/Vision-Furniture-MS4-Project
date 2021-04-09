@@ -8,25 +8,26 @@
 
 <div class="container-fluid min-vh-100 w-100 p-0">
     <div class="row">
-    <div class="col text-center mt-3">
-        <h2 class="main-heading-padding">{% trans "Sign Up" %}</h2>
+        <div class="col text-center mt-3">
+            <h2 class="main-heading-padding">{% trans "Sign Up" %}</h2>
+        </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-4 offset-4 pb-5">
-        <img class="img-fluid" src="{{ MEDIA_URL }}underline.png" alt="">
+    <div class="row">
+        <div class="col-4 offset-4 pb-5">
+            <img class="img-fluid" src="{{ MEDIA_URL }}underline.png" alt="">
+        </div>
     </div>
+
+    <p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign
+            in</a>.{% endblocktrans %}</p>
+
+    <form class="signup text-center" id="signup_form" method="post" action="{% url 'account_signup' %}">
+        {% csrf_token %}
+        {{ form|crispy }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="btns mb-3" type="submit">{% trans "Sign Up" %} &raquo;</button>
+    </form>
 </div>
-
-<p class="text-center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
-
-<form class="signup text-center" id="signup_form" method="post" action="{% url 'account_signup' %}">
-  {% csrf_token %}
-  {{ form|crispy }}
-  {% if redirect_field_value %}
-  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-  {% endif %}
-  <button class="btns mb-3" type="submit">{% trans "Sign Up" %} &raquo;</button>
-</form>
-
 {% endblock %}

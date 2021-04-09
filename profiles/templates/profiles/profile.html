@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid nav-padding">
-        <div class="row">
+<div class="container-fluid nav-padding">
+    <div class="row">
         <div class="col text-center mt-3">
             <h2 class="main-heading-padding">My Profile</h2>
         </div>
@@ -44,18 +44,18 @@
                     </thead>
                     <tbody>
                         {% for order in orders %}
-                            <tr>
-                                <td>
-                                    <a href="{% url 'order_history' order.order_number %}"
+                        <tr>
+                            <td>
+                                <a href="{% url 'order_history' order.order_number %}"
                                     title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}
-                                    </a>
-                                </td>
-                                <td>{{ order.date }}</td>
-                                {% for item in order.lineitems.all %}
-                                <td>{{ item.product.name }} x{{ item.quantity }}</td>
-                                {% endfor %}
-                                <td>£{{ order.grand_total }}</td>
-                            </tr>
+                                </a>
+                            </td>
+                            <td>{{ order.date }}</td>
+                            {% for item in order.lineitems.all %}
+                            <td>{{ item.product.name }} x{{ item.quantity }}</td>
+                            {% endfor %}
+                            <td>£{{ order.grand_total }}</td>
+                        </tr>
                         {% endfor %}
                     </tbody>
                 </table>
@@ -66,6 +66,6 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+{{ block.super }}
+<script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}
