@@ -72,7 +72,7 @@
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 Shop By Room
                             </a>
-                            <ul class="dropdown-menu w-100 horizontal-dropdown" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu w-100 horizontal-dropdown" aria-labelledby="navbarDropdown">
                                 <div class="dropdown-item">
                                     <div class="row">
                                         <div class="col d-flex justify-content-center"><a class="shadow-none"
@@ -95,7 +95,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </ul>
+                            </div>
                         </li>
                         {% include 'includes/mobile-top-header.html' %}
                     </ul>
@@ -128,14 +128,14 @@
                             {% endif %}
                         </li>
                         <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            <a class="text-black nav-link" href="#" id="users-options" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="far fa-user fa-lg"></i></div>
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu border-0" aria-labelledby="users-options">
                                 {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
                                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Administration</a>
