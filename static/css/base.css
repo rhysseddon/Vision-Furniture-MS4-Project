@@ -26,6 +26,10 @@ nav a {
     width: 180px;
 }
 
+.no-margin {
+    margin-left: 0;
+}
+
 .btn-outline-success {
     color: black;
     border-color: black;
@@ -39,6 +43,7 @@ nav a {
     background-size: cover;
     position: relative;
     max-height: 100%;
+    max-width:100%;
 }
 
 .hero-text {
@@ -235,22 +240,10 @@ nav a {
 
     /* navbar links */
     nav a {
-        font-size: 12px;
+        font-size: 15px;
     }
 
     /* Sizes logo */
-    .logo-image {
-        width: 100px;
-    }
-
-    .hero-text {
-        top: 40%;
-    }
-
-    .hero-title {
-        font-size: 35px;
-    }
-
     .logo-image {
         width: 120px;
     }
@@ -275,26 +268,6 @@ nav a {
     /* Sizes logo */
     .logo-image {
         width: 70px;
-    }
-
-    .hero-text {
-        top: 30%;
-    }
-
-    .hero-button {
-        font-size: 8px;
-    }
-
-    .hero-title {
-        font-size: 22px;
-    }
-
-    .refresh {
-        font-size: 12px;
-    }
-
-    .logo-image {
-        width: 120px;
     }
 
     .home-nav-padding {
