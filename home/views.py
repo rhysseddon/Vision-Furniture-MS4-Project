@@ -10,5 +10,8 @@ def index(request):
 
 def help_centre(request):
     """ A view that will render the help centre page """
-
-    return render(request, 'home/help_centre.html')
+    help_info = Help.objects.all()
+    context = {
+        'help_info': help_info
+    }
+    return render(request, 'home/help_centre.html', context)
