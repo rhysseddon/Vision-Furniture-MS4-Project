@@ -29,6 +29,9 @@ class Favorites(models.Model):
     """
     A model for user to add favorites
     """
+    class Meta:
+        verbose_name_plural = 'Favorites'
+
     user = models.ForeignKey(
         UserProfile, on_delete=models.CASCADE, null=False, blank=False)
     favorites = models.ManyToManyField(Product, related_name='favorites')

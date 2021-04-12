@@ -246,7 +246,7 @@ bar will be below the navbar full width.
 - A central "view our stock" button linking to all products page"
 
 <details>
-<summary>Footer (Click for image)</summary>
+<summary>Home (Click for image)</summary>
 <p align="center">
 
 ![Image](readme-images/home-screenshot.png)
@@ -270,6 +270,7 @@ and 1 item per row on mobile.
 item.
 - An edit and delete link will display for superusers, edit link will take the superuser to the edit product page and
 delete will remove the item.
+- At the bottom right a return to top button will be fixed.
 
 <details>
 <summary>Products (Click for image)</summary>
@@ -442,6 +443,19 @@ which will send payment to stripe.
 </p>
 </details>
 
+### Toasts
+
+- Toast messages will appear on the top right when the user completes or attempts certain important operations.
+
+<details>
+<summary>Toasts (Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/toasts-screenshot.png)
+</p>
+</details>
+
+## Features to Add Later
 
 
 
