@@ -198,6 +198,31 @@ to navigate a website and keep their user experience as streamlined as possible 
 
 # Features
 
+## Existing Features
 
+### Navbar
+
+-	All pages will contain the navbar.
+-	Vision furniture logo on left side next to all products and shop by room link.
+-   All products link will link to all products page.
+-   Shop by room will be a full width dropdown with links to bedroom, dining room, bathroom, living room, kitchen
+and office product pages.
+-   Search bar in centre of navbar which will allow customers to search for keywords found in product names or descriptions.
+-   Right hand logos will feature links to favorites page, my account pages and cart page.
+-   Favorites link will only be visible to logged in users.
+-   My account when logged in as superuser will dropdown links to product admin, help admin, my profile and logout.
+-   My account when logged in as user will dropdown links to my profile and logout.
+-   My account when not logged in will dropdown links to register and login.
+-   In tablet view or smaller all links will be contained in a burger dropdown icon on the right side and the search 
+bar will be below the navbar full width.
+
+
+<details>
+<summary>Navbar (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/navbar-screenshot.png)
+</p>
+</details>
 
 
