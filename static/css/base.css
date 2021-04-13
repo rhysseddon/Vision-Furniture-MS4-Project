@@ -35,6 +35,12 @@ nav a {
     border-color: black;
 }
 
+.search-bar {
+    border: 0;
+    margin-top: 0;
+    border-radius: 0;
+}
+
 /* The hero image */
 .hero-image {
     background-image: url("/media/main.jpg");
@@ -252,9 +258,10 @@ nav a {
 /* Tablet view */
 @media (max-width: 1030px) {
 
+
     /* navbar links */
     nav a {
-        font-size: 15px;
+        font-size: 13px;
     }
 
     /* Sizes logo */
