@@ -14,18 +14,60 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-10 offset-1">
-            <div class="row h-100">
+        <div class="col-10 offset-1 text-center">
+            <h4 class="text-center mb-3">FAQ</h4>
+            <div class="accordion accordion-flush" id="accordionExample">
                 {% for help in help_info %}
-                <hr>
-                <p>{{ help.question }}</p>
-                <hr>
-                <p>{{ help.answer }}</p>
-                <hr>
+                <div class="accordion-item">
+                    <h2 class="accordion-header pt-5" id="heading{{ forloop.counter }}">
+                        <a class="accordion-button" data-bs-toggle="collapse"
+                            data-bs-target="#accordion_{{ forloop.counter }}" aria-expanded="true"
+                            aria-controls="accordion_{{ forloop.counter }}">
+                            <h4>{{ help.question }} <i class="fas fa-angle-down"></i></h4>
+                        </a>
+                    </h2>
+                    <div id="accordion_{{ forloop.counter }}" class="accordion-collapse collapse"
+                        aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            {{ help.answer }}
+                        </div>
+                    </div>
+                </div>
                 {% endfor %}
             </div>
+            <hr>
+            <h4 class="text-center mb-3">Delivery Policy</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Sub-total</th>
+                        <th scope="col">Delivery Charge</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Less than £20</th>
+                        <td>£5</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">£20 to £49</th>
+                        <td>£7</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">£50 to £149</th>
+                        <td>£10</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">£150 to £399</th>
+                        <td>£25</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">£400+</th>
+                        <td>£40</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
-
 {% endblock %}
