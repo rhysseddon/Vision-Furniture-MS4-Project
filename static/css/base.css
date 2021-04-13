@@ -290,6 +290,10 @@ nav a {
     .checkout-btns {
         text-align: center;
     }
+
+    .increment-qty, .decrement-qty {
+        padding: 2px !important;
+    }
 }
 
 
