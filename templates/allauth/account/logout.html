@@ -6,18 +6,11 @@
 
 {% block inner_content %}
 
-    <div class="row w-100">
-        <div class="col text-center mt-3">
-            <h2 class="main-heading-padding">{% trans "Sign Out" %}</h2>
-        </div>
+    <div class="text-center nav-padding">
+        <h2 class="main-heading-padding">{% trans "Sign Out" %}</h2>
+        <img class="img-fluid w-50 pb-5" src="{{ MEDIA_URL }}underline.png" alt="">
+        <p class="text-center">{% trans 'Are you sure you want to sign out?' %}</p>
     </div>
-    <div class="row">
-        <div class="col-4 offset-4 text-center pb-5">
-            <img class="img-fluid" src="{{ MEDIA_URL }}underline.png" alt="">
-        </div>
-    </div>
-    <p class="text-center">{% trans 'Are you sure you want to sign out?' %}</p>
-
     <form method="post" class="text-center" action="{% url 'account_logout' %}">
         {% csrf_token %}
         {% if redirect_field_value %}

@@ -6,17 +6,13 @@
 
 {% block inner_content %}
 
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h2 class="main-heading-padding">{% trans "Sign Up Closed" %}</h2>
-        </div>
+    <div class="text-center nav-padding">
+        <h2 class="main-heading-padding">{% trans "Sign Up Closed" %}</h2>
+        <img class="img-fluid w-50 pb-5" src="{{ MEDIA_URL }}underline.png" alt="">
+        <p class="text-center">{% trans "We are sorry, but the sign up is currently closed." %}</p>
     </div>
-    <div class="row">
-        <div class="col-4 offset-4 pb-5">
-            <img class="img-fluid" src="{{ MEDIA_URL }}underline.png" alt="">
-        </div>
-    </div>
+    
 
-    <p class="text-center">{% trans "We are sorry, but the sign up is currently closed." %}</p>
+    
 
 {% endblock %}
