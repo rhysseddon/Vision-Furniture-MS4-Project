@@ -66,6 +66,15 @@ nav a {
     background-color: #ebe9e9;
 }
 
+.horizontal-dropdown .dropdown-item {
+    background-color: #ebe9e9;
+}
+
+.horizontal-dropdown a:hover {
+    text-decoration: none;
+    color: rgb(83, 75, 75);
+}
+
 /* from Bulma for icons*/
 .icon {
     align-items: center;
@@ -95,6 +104,11 @@ nav a {
 }
 
 /* Button styling  */
+.btn-black {
+    background: black;
+    color: white;
+}
+
 .btns {
     color: #ffffff !important;
     background: #000000;
