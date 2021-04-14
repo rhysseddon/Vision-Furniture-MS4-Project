@@ -540,51 +540,46 @@ For the testing page [(click Here)](TESTING.md)
 
 ## Deployment
 
-### Setup
-- In the IDE create an env.py file to store the sensitive data and hidden using environment variables.
-- Create a .gitignore file for files to be ignored when pushing to gitHub.
-- Add env.py file and auto generated `__pycache__/` file to the .gitignore file.
-- Default environment variables setup for env.py is as follows:
-- Import os
-- *Blank Line*
-- os.environ.setdefault("IP", "Added by user")
-- os.environ.setdefault("PORT", "Added by user")
-- os.environ.setdefault("SECRET_KEY", "Added by user")
-- os.environ.setdefault("MONGO_URI", "Added by user")
-- os.environ.setdefault("MONGO_DBNAME", "Added by user")
+### Installation Prerequisites
 
-### Heroku Deployment
+To be able to run the project the following technologies will be need to be in intalled in your IDE environment.
+- Python3
+- Git 
+- pip3
 
-1. Add required files for Heroku to run the app. Create requirements.txt and Procfile:
-- `$ pip3 freeze --local > requirements.txt`
-- `$ echo web: python app.py > Procfile`
-2. Push these 2 files to gitHub.
-3. Login to Heroku.com and from dashboard go to "new" - "create new app" and add details of app to create.
-4. Setup automatic deployment by selecting "Deploy" tab then under "Deployment Method" - "connect to GitHub".
-5. Add gitHub repository name "Car-Owner-Reviews-MS3-Project" and connect to app.  
-6. Go to settings tab for the app and select "Reveal Config Vars".  
-7. Add in the variables from the env.py file.
-8. Back under "Deploy" tab, under "Automatic Deploys" select "Enable Automatic Deployment"
-9. Under "Manual Deploy" select "Deploy Branch"
-10. After Heroku has built the app it will be successfully deployed. Select "View" to launch. 
-
-The live Heroku deployment can be found [Here](https://vision-furniture.herokuapp.com/) 
+You will need to be signed up to the following services:
+- [Heroku](https://signup.heroku.com/?c=70130000000NeLCAA0&gclid=Cj0KCQjwpdqDBhCSARIsAEUJ0hMbGWS3dMlZowadFExUalBu2L_UVf27xViAk9dBlCKLsRQI7V2PuScaAmCPEALw_wcB)
+- [AWS](https://aws.amazon.com/)
+- [Stripe](https://stripe.com/gb)
 
 ### Cloning on GitHub
+
 1. Login to GitHub.com.
 2. Open my repositories.
 3. Click "Code" then under "Clone" copy the link with the HTTPS URL.  
 4. Go to the terminal in your IDE environment. 
 5. Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
 6. Type `git clone` and paste the copied HTTPS URL.
-7. After pressing enter the clone will be saved to your chosen directory. 
+7. After pressing enter the clone will be saved to your chosen directory.
 
 ### Local Deployment On Gitpod
 
-1. Follow steps above to clone repository.
+1. After cloning repository on gitHub. Go to your chosen IDE environment and open the clone directory.
 2. Install the libraries from the requirements.txt, in the terminal type - `pip3 install -r requirements.txt`.
-3. Follow the "setup" steps above to create env.py and .gitignore files for the hidden environment variables.
-4. The app can now be opened in a browser by typing in the terminal: `python3 app.py`.
+3. Set your environment variables in your gitPod settings or in an env.py file.
+4. If setting variables within an env file add this to the .gitignore file so your variables are not exposed 
+when pushing to gitHub.
+5. Your environment variable will need to be set as follows:
+os.environ["DEVELOPMENT"] = "True"
+os.environ["SECRET_KEY"] = "Your Secret key"
+os.environ["STRIPE_PUBLIC_KEY"] = "Your Stripe Public key"
+os.environ["STRIPE_SECRET_KEY"] = "Your Stripe Secret key"
+os.environ["STRIPE_WH_SECRET"] = "Your Stripe WH_Secret key"
+6. Create the database from the models by typing in the terminal `python3 manage.py makemigrations`. Followed by
+`python3 manage.py migrate`.
+7. Load the data fixtures by typing in the terminal: `python3 manage.py loaddata products`
+8. Create a superuser so you can log in to the Django admin by typing in the terminal: `python3 manage.py createsuperuser`
+9. The site can now be run locally by typing in the terminal `python3 manage.py runserver`
 
 ## Credits
 
