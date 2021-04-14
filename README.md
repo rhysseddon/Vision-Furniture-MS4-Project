@@ -555,7 +555,7 @@ You will need to be signed up to the following services:
 ### Cloning on GitHub
 
 1. Login to GitHub.com.
-2. Open my repositories.
+2. Open rhysseddon/Vision-Furniture-MS4-Project.
 3. Click "Code" then under "Clone" copy the link with the HTTPS URL.  
 4. Go to the terminal in your IDE environment. 
 5. Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
@@ -569,17 +569,77 @@ You will need to be signed up to the following services:
 3. Set your environment variables in your gitPod settings or in an env.py file.
 4. If setting variables within an env file add this to the .gitignore file so your variables are not exposed 
 when pushing to gitHub.
-5. Your environment variable will need to be set as follows:
-os.environ["DEVELOPMENT"] = "True"
-os.environ["SECRET_KEY"] = "Your Secret key"
-os.environ["STRIPE_PUBLIC_KEY"] = "Your Stripe Public key"
-os.environ["STRIPE_SECRET_KEY"] = "Your Stripe Secret key"
-os.environ["STRIPE_WH_SECRET"] = "Your Stripe WH_Secret key"
+5. Your environment variables will need to be set as follows:
+- os.environ["DEVELOPMENT"] = "True"
+- os.environ["SECRET_KEY"] = "Your Secret key"
+- os.environ["STRIPE_PUBLIC_KEY"] = "Your Stripe Public key"
+- os.environ["STRIPE_SECRET_KEY"] = "Your Stripe Secret key"
+- os.environ["STRIPE_WH_SECRET"] = "Your Stripe WH_Secret key"
 6. Create the database from the models by typing in the terminal `python3 manage.py makemigrations`. Followed by
-`python3 manage.py migrate`.
+`python3 manage.py migrate`
 7. Load the data fixtures by typing in the terminal: `python3 manage.py loaddata products`
 8. Create a superuser so you can log in to the Django admin by typing in the terminal: `python3 manage.py createsuperuser`
 9. The site can now be run locally by typing in the terminal `python3 manage.py runserver`
+
+### Heroku Deployment
+
+1. After logging in to Heroku, select "Create New App" Choose the region closest to you and select "Create app".
+2. On the resources tab, to provision the database in the add on field search for and select "Heroku Postgres".
+3. A pop up should appear and under "Plan name" use "Hobby Dev-Free" and select "Provision".
+4. Go to your IDE and type `pip3 install dj_database_url` and `pip3 install psycopg2-binary` as these need to be 
+installed to use Postgres. Also `pip install gunicorn` for the webserver.
+5. To make sure Heroku installs all of the apps when deployed save the requirements by typing in the terminal
+`pip3 freeze > requirements.txt`
+6. Back on Heroku under settings, select "Reveal config vars" and copy the key from DATABASE_URL.
+7. In the project folder on settings.py in the database setting, comment out the current database setting.
+8. Replace with `DATABASES = {
+    'default': dj_database_url.parse('<Enter the copied DATABASE_URL key here>')
+}`
+9. Add the data to the postgres database by typing in the terminal `python3 manage.py makemigrations`. Followed by
+`python3 manage.py migrate`
+10. Load the data fixtures by typing in the terminal: `python3 manage.py loaddata products`
+11. Create a superuser so you can log in to the Django admin by typing in the terminal: `python3 manage.py createsuperuser`
+12. Return to database setting in settings.py and remove code added in step 8 and uncomment the previous database setting.
+13. Create a Procfile and add `web: gunicorn vision_furniture.wsgi:application`
+14. Login to Heroku through the cli `heroku login -i`
+15. Temporarily disable collect static by typing `heroku config:set DISABLE_COLLECTSTATIC=1`
+16. Add `vision-furniture.herokuapp.com, 'localhost' to ALLOWED_HOSTS in settings.py.
+17. The app can now be deployed by typing in the terminal `heroku git:remote -a vision-furniture` and `git push heroku master`
+18. On heroku dashboard under "Deploy" set "Deployment method" to connect to github. Under "Automatic Deplays" set 
+"Enable automatic deploy" so the code is automatically deployed to heroku and github.
+
+### Add Static Files to AWS
+
+1. Go to AWS and find S3 under services and create a new bucket, selecting the region closest to you and 
+allowing all public access.
+2. Go to the new bucket and under properties tab, turn on static website hosting.
+3. Under permissions tab the CORS configuration tab and enter the following:
+`[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]`
+
+4. Go to the bucket policy tab. And select, policy generator so we can create a security policy for this bucket.
+5. Add in the following:
+- Policy type: S3 bucket policy 
+- Effect: Allow
+- Principal: `*`
+- Action: GetObject
+- Copy the ARN from the bucket policy tab. And paste it into the ARN box at the bottom.
+- Click Add statement. Then generate policy.
+6. Copy the policy into the bucket policy editor.
+7. Add `/*` onto the end of the resource key. Click Save.
+8. Go to access control list tab and set the list objects permission for everyone under the Public Access section.
 
 ## Credits
 
