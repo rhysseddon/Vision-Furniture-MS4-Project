@@ -13,9 +13,15 @@
     * [Wireframes](#Wireframes)
     * [Surface](#Surface)
 * [Features](#Features)
-    * [Implemented Features](#Implemented-Features)
+    * [Existing Features](#Existing-Features)
     * [Features To Add Later](#Features-To-Add-Later)
+* [Technologies Used](#Technologies-Used)
+* [Testing](TESTING.md)
+* [Deployment](#Deployment)
+* [Credits](#Credits)
 
+
+The live deployed website can be found [Here](https://vision-furniture.herokuapp.com/)
 
 # Purpose
 
@@ -94,7 +100,7 @@ With an icon on each product that will link to the page showing the details of t
 once the minimum viable product has been built and the website is generating money.
 -	Product reviews. Could possibly be added in future, more research required on how to regulate the reviews. 
 
-### Structure
+## Structure
 
 -	The site will be structured in a linear format keeping the users’ expectations as the main priority.
 -	The site will have a similar layout to the websites I’ve researched, so the customers will not need to “re-learn” how 
@@ -105,7 +111,7 @@ to navigate a website and keep their user experience as streamlined as possible 
 
 ![Image](readme-images/database-schema.png)
 
-### Skeleton
+## Skeleton
 
 ### Wireframes
 
@@ -529,7 +535,75 @@ thresholds.
 - [Randomkeygen.com](https://randomkeygen.com/) - Used for generating a random secret key.
 - [Pep8online.com/](http://pep8online.com/) - Used for validating Python code.
 
+## Testing
+For the testing page [(click Here)](TESTING.md)
 
+## Deployment
 
+### Setup
+- In the IDE create an env.py file to store the sensitive data and hidden using environment variables.
+- Create a .gitignore file for files to be ignored when pushing to gitHub.
+- Add env.py file and auto generated `__pycache__/` file to the .gitignore file.
+- Default environment variables setup for env.py is as follows:
+- Import os
+- *Blank Line*
+- os.environ.setdefault("IP", "Added by user")
+- os.environ.setdefault("PORT", "Added by user")
+- os.environ.setdefault("SECRET_KEY", "Added by user")
+- os.environ.setdefault("MONGO_URI", "Added by user")
+- os.environ.setdefault("MONGO_DBNAME", "Added by user")
+
+### Heroku Deployment
+
+1. Add required files for Heroku to run the app. Create requirements.txt and Procfile:
+- `$ pip3 freeze --local > requirements.txt`
+- `$ echo web: python app.py > Procfile`
+2. Push these 2 files to gitHub.
+3. Login to Heroku.com and from dashboard go to "new" - "create new app" and add details of app to create.
+4. Setup automatic deployment by selecting "Deploy" tab then under "Deployment Method" - "connect to GitHub".
+5. Add gitHub repository name "Car-Owner-Reviews-MS3-Project" and connect to app.  
+6. Go to settings tab for the app and select "Reveal Config Vars".  
+7. Add in the variables from the env.py file.
+8. Back under "Deploy" tab, under "Automatic Deploys" select "Enable Automatic Deployment"
+9. Under "Manual Deploy" select "Deploy Branch"
+10. After Heroku has built the app it will be successfully deployed. Select "View" to launch. 
+
+The live Heroku deployment can be found [Here](https://vision-furniture.herokuapp.com/) 
+
+### Cloning on GitHub
+1. Login to GitHub.com.
+2. Open my repositories.
+3. Click "Code" then under "Clone" copy the link with the HTTPS URL.  
+4. Go to the terminal in your IDE environment. 
+5. Change the working directory to where you want the clone to be saved by typing `cd` and the name of the directory.
+6. Type `git clone` and paste the copied HTTPS URL.
+7. After pressing enter the clone will be saved to your chosen directory. 
+
+### Local Deployment On Gitpod
+
+1. Follow steps above to clone repository.
+2. Install the libraries from the requirements.txt, in the terminal type - `pip3 install -r requirements.txt`.
+3. Follow the "setup" steps above to create env.py and .gitignore files for the hidden environment variables.
+4. The app can now be opened in a browser by typing in the terminal: `python3 app.py`.
+
+## Credits
+
+### Tutorials
+
+- The site is based on the Boutique Ado code insitute tutorial project.
+- This post on[stackoverflow.com](https://stackoverflow.com/questions/48777214/bootstrap-4-how-to-horizontally-align-elements-inside-a-drop-down) 
+helped me with the design of the horizontal dropdown nav.
+
+### Images
+
+ - Hero Image was from Sammsara Luxury Modern Home [View](https://www.pexels.com/photo/assorted-gold-plated-table-figurines-1099816/)
+ - Underline title graphic from pngitem.com [View](https://www.pngitem.com/middle/JxiooJ_underline-design-and-simple-design-hand-drawn-elements/)
+ - All product images can be found on [pexels.com](https://www.pexels.com/) and are opensource.
+
+### Acknowledgements
+
+- Friends and family for their honest opinions and checking responsiveness on their devices.
+- Code Institute Slack Channel for valuable guidance and opinions.
+- Mentor Rohit Sharma for his excellent guidance and advice.
 
 
