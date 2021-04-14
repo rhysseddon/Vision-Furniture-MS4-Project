@@ -88,25 +88,21 @@
     <hr>
     {% endfor %}
     <div class="row">
-        <div class="col-6 col-md-2 offset-md-6 text-center delivery-link">
-            <a href="">
+        <div class="col-12 col-md-6 offset-md-3 delivery-link text-center">
+            <a class="text-left " href="">
                 <h6>See our delivery policy</h6>
             </a>
-        </div>
-        <div class="col-6 col-md-4 text-center">
             <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-        </div>
-        <div class="col-6 offset-3 col-md-4 offset-md-8 text-center">
+            <hr>
             <h6><strong>Sub total: £{{ sub_total|floatformat:2 }}</strong></h6>
+            <hr>
+            <h4><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
         </div>
+
     </div>
-    <div class="row">
-        <div class="col-6 offset-3 col-md-4 offset-md-8 text-center">
-            <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-md-5 offset-md-7 mt-3 pb-3 checkout-btns">
+
+    <div class="row text-center">
+        <div class="col pt-4 pb-4">
             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg keep-shopping">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
