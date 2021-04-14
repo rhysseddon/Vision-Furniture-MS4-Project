@@ -89,7 +89,7 @@
     {% endfor %}
     <div class="row">
         <div class="col-12 col-md-6 offset-md-3 delivery-link text-center">
-            <a class="text-left " href="">
+            <a class="text-left " href="{% url 'help_centre' %}">
                 <h6>See our delivery policy</h6>
             </a>
             <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>

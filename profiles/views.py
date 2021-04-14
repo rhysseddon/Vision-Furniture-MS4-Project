@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
@@ -34,9 +34,14 @@ def profile(request):
     return render(request, template, context)
 
 
+@login_required
 def order_history(request, order_number):
     """ A view that will render the previous orders"""
     order = get_object_or_404(Order, order_number=order_number)
+
+    if not request.user.is_authenticated:
+        messages.error(request, 'Sorry, you need to log in.')
+        return redirect(reverse('home'))
 
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
