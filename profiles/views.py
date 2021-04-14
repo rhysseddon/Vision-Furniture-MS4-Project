@@ -39,10 +39,6 @@ def order_history(request, order_number):
     """ A view that will render the previous orders"""
     order = get_object_or_404(Order, order_number=order_number)
 
-    if not request.user.is_authenticated:
-        messages.error(request, 'Sorry, you need to log in.')
-        return redirect(reverse('home'))
-
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'
@@ -57,6 +53,7 @@ def order_history(request, order_number):
     return render(request, template, context)
 
 
+@login_required
 def view_favorites(request):
     """ A view that will render the favorites page """
     user = UserProfile.objects.get(user=request.user)
