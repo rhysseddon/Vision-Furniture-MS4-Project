@@ -103,6 +103,8 @@ to navigate a website and keep their user experience as streamlined as possible 
 
 ### Database Schema
 
+![Image](readme-images/database-schema.png)
+
 ### Skeleton
 
 ### Wireframes
@@ -443,6 +445,23 @@ which will send payment to stripe.
 </p>
 </details>
 
+### Help Centre
+- Central title "Help Centre"
+- Below a graphic will display underlining the title.
+- Subheading "FAQ"
+- Bootstrap accordion displaying questions and answers. 
+- Questions and answers will be customised in the django admin.
+- Subheading "Delivery Policy".
+- Table displaying delivery cost information.
+
+<details>
+<summary>Help Centre (Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/help-centre-screenshot.png)
+</p>
+</details>
+
 ### Toasts
 
 - Toast messages will appear on the top right when the user completes or attempts certain important operations.
@@ -456,6 +475,61 @@ which will send payment to stripe.
 </details>
 
 ## Features to Add Later
+
+Features that will be added later due to time constraints on the project.
+
+- Admin help centre interface. For admin to be able to edit, update and delete questions and answers directly, 
+rather than through the django admin. A feature could also be added to allow the admin to edit the delivery cost
+thresholds.
+- Contact form on the help centre page for users to message any queries not covered in the FAQs.
+- A pop up model for admin when deleting products to ensure products arent deleted accidentally.
+
+## Technologies Used 
+
+### Languages 
+
+- HTML: Used for the site structure.
+- CSS: Used for adding styles to the website.
+- Javascript: Used to add the website interactive features.
+- Python: Used to handle the backend functionality.
+
+### Libraries and Frameworks
+
+- Django
+- Bootstrap
+- Jquery
+
+### Databases and Storage
+
+- SQLite3: Used for development.
+- PostgresSQL: Used for deployed website.
+- AWS: Used for storing static files.
+
+### Payments
+
+- Stripe: Used to handle the payments at checkout.
+
+### IDE and Hosting
+
+- Gitpod: Used as IDE environment.
+- Git: Used for version control.
+- Github: Used for version control and repository hosting.
+- Heroku: Used to host live website.
+
+### Tools
+
+- [Google fonts](http://Fonts.google.com) - Used to obtain the fonts.
+- [Balsamiq](https://balsamiq.com/) - Used for creation of wireframes.
+- [DrawSQL](https://drawsql.app/)- Used for creation of the database schema.
+- [Jshint.com/](https://jshint.com/) - Used for validation of Javascript code.
+- [Validator.w3.org](http://Validator.w3.org)- Used for validation of HTML code.
+- [Jigsaw.w3.org/css-validator](http://Jigsaw.w3.org/css-validator) - Used for validation of CSS code.
+- [Google.com/test/mobile-friendly](http://Search.google.com/test/mobile-friendly) - Used for testing the website mobile responsiveness.
+- Google Chrome DevTools - Used for testing website responsiveness.
+- [Randomkeygen.com](https://randomkeygen.com/) - Used for generating a random secret key.
+- [Pep8online.com/](http://pep8online.com/) - Used for validating Python code.
+
+
 
 
 
