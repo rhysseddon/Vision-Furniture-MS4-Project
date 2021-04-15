@@ -634,7 +634,7 @@ allowing all public access.
 ]
 ```
 
-4. Go to the bucket policy tab. And select, policy generator so we can create a security policy for this bucket.
+4. Go to the bucket policy tab. And select "policy generator" so we can create a security policy for this bucket.
 5. Add in the following:
 - Policy type: S3 bucket policy 
 - Effect: Allow
@@ -645,6 +645,41 @@ allowing all public access.
 6. Copy the policy into the bucket policy editor.
 7. Add `/*` onto the end of the resource key. Click Save.
 8. Go to access control list tab and set the list objects permission for everyone under the Public Access section.
+9. Create a user to access the bucket by selecting IAM from the servies menu.
+10. Select "Groups" and select "Create new group". Add in a new group name and click next, next again then "create new group"
+11. Create a policy to access the bucket, by selecting "policies" then "create policy". Select JSON tab and import managed policy. Search for 
+s3 and import "AmazonS3FullAccess".
+12. Copy the bucket policy ARN from the bucket policy in s3 > permissions. Paste it into the JSON resource key on create policy twice 
+giving the second paste a `/*` at the end. Select "review policy". Give the policy a name and description and create the policy.
+13. Go to "groups", select the new group, select "attach policy", search for the newly created policy and attach it to the policy.
+14. Go to "users", add user, create a user name, give them programmatic access and select next.
+15. Add the new user to the group and select next to create user then download the .csv file.
+17. Go to your IDE terminal type: `pip3 intsall boto3` and `pip3 intall django-storages` to install the packages 
+to connect to django. Type: `pip3 freeze > requirements.txt` so they get installed on heroku when its deployed.
+18. Add 'storages' to installed apps on the settings.py file. Add the following code to tell Django which bucket to 
+communicate with:
+```
+if 'USE_AWS' in os.environ:
+    # Bucket Config
+    AWS_STORAGE_BUCKET_NAME = 'vision-furniture'
+    AWS_S3_REGION_NAME = 'eu-west-2'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY_ID')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    # Static and media files
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    # Override static and media URLs in production
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+```
+19. On Heroku add the AWS keys from the .csv file to the config vars. Also add USE_AWS: True, so the that the setting file knows 
+to use the AWS configuration when deploying to Heroku. Remove the COLLECTSTATIC variable.
+20. Push all the changes to Github. Which will trigger an automatic deployment to Heroku.
 
 ## Credits
 
