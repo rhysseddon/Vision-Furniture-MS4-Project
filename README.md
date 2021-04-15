@@ -592,9 +592,12 @@ installed to use Postgres. Also `pip install gunicorn` for the webserver.
 `pip3 freeze > requirements.txt`
 6. Back on Heroku under settings, select "Reveal config vars" and copy the key from DATABASE_URL.
 7. In the project folder on settings.py in the database setting, comment out the current database setting.
-8. Replace with `DATABASES = {
+8. Replace with: 
+```
+DATABASES = {
     'default': dj_database_url.parse('<Enter the copied DATABASE_URL key here>')
-}`
+}
+```
 9. Add the data to the postgres database by typing in the terminal `python3 manage.py makemigrations`. Followed by
 `python3 manage.py migrate`
 10. Load the data fixtures by typing in the terminal: `python3 manage.py loaddata products`
@@ -614,7 +617,8 @@ installed to use Postgres. Also `pip install gunicorn` for the webserver.
 allowing all public access.
 2. Go to the new bucket and under properties tab, turn on static website hosting.
 3. Under permissions tab the CORS configuration tab and enter the following:
-`[
+```
+[
   {
       "AllowedHeaders": [
           "Authorization"
@@ -627,7 +631,8 @@ allowing all public access.
       ],
       "ExposeHeaders": []
   }
-]`
+]
+```
 
 4. Go to the bucket policy tab. And select, policy generator so we can create a security policy for this bucket.
 5. Add in the following:
