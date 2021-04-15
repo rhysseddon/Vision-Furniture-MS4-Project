@@ -534,6 +534,7 @@ thresholds.
 - Google Chrome DevTools - Used for testing website responsiveness.
 - [Randomkeygen.com](https://randomkeygen.com/) - Used for generating a random secret key.
 - [Pep8online.com/](http://pep8online.com/) - Used for validating Python code.
+- [www.favicon-generator.org](https://www.favicon-generator.org/search/---/Flag) - Used for creation and implementation of favicon.
 
 ## Testing
 For the testing page [(click Here)](TESTING.md)
