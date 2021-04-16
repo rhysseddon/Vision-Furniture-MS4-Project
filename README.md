@@ -48,13 +48,16 @@ As a returning user to the site, I would like to:
 1.	Easily register my details – to create a profile for my personal details.
 2.	Be able to view my previous purchases.
 3.	Edit my personal details on my profile.
-4.	Be able to contact the company regarding a previous purchase.  
+4.  Save products that I want to purchase in future.
+5.	Be able to contact the company regarding a previous purchase.  
 
 ### Staff User 
 
 As a member of staff, I need to be able to:
 1.	Easily add, update and delete products.
 2.	Easily view, update and delete customer orders.
+3.  Have the ability to edit, update and delete FAQs. To be able to add if customers are repeatedly getting in contact with a particular 
+question that is not already in FAQs. Or delete a FAQ if it is no longer relevant.
 
 # UX
 
@@ -534,7 +537,7 @@ thresholds.
 - Google Chrome DevTools - Used for testing website responsiveness.
 - [Randomkeygen.com](https://randomkeygen.com/) - Used for generating a random secret key.
 - [Pep8online.com/](http://pep8online.com/) - Used for validating Python code.
-- [www.favicon-generator.org](https://www.favicon-generator.org/search/---/Flag) - Used for creation and implementation of favicon.
+- [favicon.io/favicon-generator/](https://favicon.io/favicon-generator/) - Used for creation and implementation of favicon.
 
 ## Testing
 For the testing page [(click Here)](TESTING.md)
