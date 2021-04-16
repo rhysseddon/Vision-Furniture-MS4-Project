@@ -3,6 +3,7 @@
 ## Testing Contents
 * [Code Validation](#Code-Validation)
 * [User Story Testing](#User-Story-Testing)
+* [Manual Testing](#Manual-Testing)
 
 #### Return to [README.md](README.md)
 
@@ -176,3 +177,133 @@ question that is not already in FAQs. Or delete a FAQ if it is no longer relevan
 When logging in to the Django admin, and selecting "Help" staff users have the ability to view, update and delete the FAQs.
 
 ![Image](readme-images/staff-user-3.png)
+
+## Manual Testing
+
+### Favicon
+
+- The website favicon should display in the browser tab.
+
+![Image](readme-images/favicon-test.png)
+
+### Navbar
+
+1. Vision Furniture logo must link to homepage.
+2. All Products must link to a page displaying all products.
+3. "Shop by room" must drop a full width horizontal menu containing every room.
+4. Search Bar must be visible central in the navbar on desktop and full width below the navbar in small screen sizes,
+see search bar test case for functionality test.
+5. Favorites link must only be visible for logged in users and should link to the favorites page.
+6. My account must be a visible link and when selected for: 
+- Unregistered users must display links to "Register" and "Login". 
+- Users the dropdown must display links to "My Profile" and "Logout". 
+- Super users must display links to "Product Administration", "My Profile" and "Logout".
+- All links must direct to the desired location. (See Registering and Authentication for functionality)
+7. Cart link must be visible and must display the cart total below. To test this add, delete and update a number
+of items in the cart to test if the amount updates correctly.
+8. Using devtools switch to tablet and mobile views, all links must now be contained inside a burger icon menu.
+9. Repeat steps 3 to 7 to test in these views.
+10. Navbar should be fixed to the top of the page in all screen sizes and on all pages.
+
+### Search Bar
+
+1. Must contain the placeholder "What is your Vision?".
+2. Search for a keyword found in a product name. Correct results must display on product page.
+3. Search for a keyword found in a product product description. Correct results must display on product page.
+4. Search for a keyword not found in a product name or description, products page must display with no results.
+5. When searching with the input empty, an error message must display. "Please enter search critera".
+
+### Footer
+
+1. Footer must display the same on all screen sizes.
+2. Social media links must display on the left, and should link to the correct social media sites.
+3. "Need Help" button should display on the right and should link to the help centre.
+
+### All Auth pages
+
+All of the all auth pages must display an underline graphic below the title.
+
+#### Registering
+
+1. Register page display the title "Sign up".
+2. Must display "Already have an account? Then please sign in", "Sign in must be a link and must direct to login page".
+3. Must display allauth form containing, Email, Email(again), Username, Password and Password (again).
+4. Must display an error message if the user attempts to use an already registered username.
+5. Must display an error message if the emails entered do not match. 
+6. Must display an error message if the passwords entered do not match.
+7. An error message must display if any of the fields are not completed to the correct format.
+8. When the form is successfully completed a message must display on the page "Verify your email address", an 
+information message must appear "Confirmation email sent to <emailaddress>".
+9. A check should be done to confirm the email was sent to the desired email address. 
+
+#### Authentication
+
+1. Login display the title "Sign In".
+2. Must display "If you have not created an account yet, then please sign up first". "Sign up" must be a link 
+directing to the register page.
+3. Must display an all auth sign in form containing "Login" and "Password".
+4. Must display an error message if the user name is not in the database and/or if the password is incorrect.
+5. An error message must display if any of the fields are not completed to the correct format.
+6. A checkbox must display "Remember Me", and when checked the users information should be saved, so login is not 
+required.
+7. Home and Sign in buttons must display and direct to the desired locations.
+8. Forgot password link must display and when selected should direct to the all auth pages to reset the password.
+9. A check must be carried out the test if the reset password email was sent.
+10. On the email a link should be selected to return to the site where the user must be able to enter a new password.
+11. The user should then be prompted with a message on the page "Password reset". The confirmation email
+confirming the password reset must also be checked.
+12. Check that the new password works by logging in again. Success message must appear when successfully signed in.
+13. Logout Page must display the title "Sign Out" and when selecting the button "Sign Out" all users must be signed out,
+users should be directed back to the home page and a success message must appear "You have signed out". 
+
+### Home Page
+
+1. The page must display a background image.
+2. A central title must display "Vision Furniture" and below "Refresh Your Space"
+3. A button must display "View Our Stock" and must direct to the products page where all of the products must display.
+
+### Profile Page
+
+1. Must display the title "My Profile".
+2. Underline graphic must display under title.
+3. Subtitle must display "Your Delivery Information".
+4. Must display a prefilled form containing phone number, street address 1, street address 2, town or city, county, postcode.
+5. Must display a button "Update Information"
+6. A test should be carried out by filling in the form and selecting "Update Information" then checking if the information 
+was updated in the database by entering another page then entering my profile again in my account.
+7. Below the form must display a subheading "Order History". 
+8. A table must display with the columns order number, date, items and order total.
+9. An order should be placed on the website to test if it appears in the order history with the correct values
+in the table.
+
+### Products Page
+
+1. Should contain the title "Products"
+2. Underline graphic must display under title.
+3. On the left the number of product displaying should be shown.
+4. On the right a drop down box must display with the placeholder "Sort By".
+5. The dropdown should contain the options to sort by:
+- Price (low to high)
+- Price (high to low)
+- Name (A to Z)
+- Name (Z to A)
+6. Each of these sorting options should be tested and the desired sort results must be correct.
+7. When accessed through the "All Products" link in the navbar and "View Stock" on the homepage all products in the 
+database should be displayed.
+8. When accessed through any of the "Shop By Room" links on the navbar only the products from that particular room
+must display and a sub-heading of that room should display.
+9. Below must display a grid containing each product. The grid will display 3 items on each row on tablet or larger 
+and 1 item per row on mobile.  
+10. Each item must display the product image, product name, product price and a button "View Item". When the button is
+selected users must be directed to the product details page.
+11. For users logged in as superusers an edit and delete link must display. The edit link must redirect to the
+edit product page and the delete link must remove the item. This can be tested by then searching for the deleted item.
+12. A fixed up arrow button must display in the bottom right corner and must direct users to the top of the page.
+
+
+
+
+
+
+
+
