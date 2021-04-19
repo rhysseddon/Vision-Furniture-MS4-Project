@@ -295,10 +295,136 @@ must display and a sub-heading of that room should display.
 9. Below must display a grid containing each product. The grid will display 3 items on each row on tablet or larger 
 and 1 item per row on mobile.  
 10. Each item must display the product image, product name, product price and a button "View Item". When the button is
-selected users must be directed to the product details page.
+selected users must be directed to that product details page.
 11. For users logged in as superusers an edit and delete link must display. The edit link must redirect to the
 edit product page and the delete link must remove the item. This can be tested by then searching for the deleted item.
 12. A fixed up arrow button must display in the bottom right corner and must direct users to the top of the page.
+
+### Product Details
+
+1. The product details must display inside a box. 
+2. In small screen sizes the product image must display above the product details, in medium screen sizes and larger
+the image must display on the left with the product details on the right.  
+3. The product details must display a title with the name of the product.
+4. For logged in users, next to the title must display a black button with a heart icon. To test this:
+ - Select the button, a toast message must appear "Added product to favorites".
+ - Go to the favorites page and check the product displays on the page.
+ - Select "View Item" and when back on the product detail page select the heart button again, a toast message must 
+ then appear "Removed product from favorites".
+ - Return to the favorites page to check if the product has been removed.
+ - Repeat these step on another product.
+5. For superusers, below the title must display the links Edit|Delete. The edit link must redirect to the
+edit product page and the delete link must remove the item. This can be tested by then searching for the deleted item.
+6. Below these links the details of price, product discription, dimensions, delivery cost must display.
+7. A box labelled quanitity must display, followed by the buttons "Keep Shopping and Add to Cart".
+8. Test the quanity box plus and minus button functionality. And the add to cart button functionality which should trigger
+a toast message "Success, Added <item> to your cart". The toast should also include all of the items in the cart
+displaying their image, name and quantity . Add different quantities of items and check the cart page and the toast 
+to see if the correct number of items was added. 
+9. The "Keep Shopping" button should direct to the all products page.
+
+#### Cart
+
+1. Should contain the title "Shopping Cart"
+2. Underline graphic must display under title.
+3. On meduim screens sizes and above must display a table containing product info, price, quantity and total.
+4. Check functionality of quantity box, increase and decrease the quantity and select update to test if the price
+and the below totals update correctly.  
+5. Selecting remove should remove the item from the page and the totals should update accordingly along with a toast success message. 
+Remove all items from the cart to test if the cart displays blank with a subheading of "Your cart is empty"
+6. On small screensize products must display full width for each product.
+7. Test functionality of "See our delivery policy button", which must direct to the help centre.
+8. The "Keep Shopping" button should direct to the all products page.
+9. The "Secure Checkout" button should direct to the checkout page and the products in the cart should display on this 
+page also. 
+10. With items in the cart logout and go to the cart page, it must display blank with a subheading of "Your cart is empty".
+11. Log back in again and check if the items from the previous login are still in the cart.
+
+#### Checkout
+
+1. The checkout page should only be accessible with items in the cart.
+2. Must contain the title "Checkout"
+3. Underline graphic must display under title.
+4. Logged out users should be prompted to "login / register now to save your delivery information and order history",
+chech the functionality of the register/login buttons. Below them should display "In a hurry? Checkout below".
+5. On medium and lager screensizes delivery information must display on the left with order summary on the right.
+6. On small screen sizes order delivery information and order summary must display full width with order summary
+displaying above.
+7. Order summary must display the subheading "Order summary" and must contain product image, name, quantity, total
+, subtotal and grand total.
+8. Delivery information must contain the subheadings "Details", "Delivery" and payment".
+9. The delivery information form should full name, email address, phone number, street address 1, street address 2, town or city, county, postcode and
+country (dropdown) and should be prefilled for logged in users.
+10. Below the form for logged in users "Save this information to my profile" with a checkbox must display. Test the functionality of this by 
+changing the information and once the order is placed check it has been saved in "my profile".
+11. Using the stripe test card numbers attempt to complete a payment, when selecting "Complete order" it should
+direct to the checkout success page with a toast message to confirm.
+12. Login to the django admin to confirm the order was created.
+13. Check the user was sent an email confirmation of the order.
+14. "Adjust cart" button should direct to the shopping cart page.
+15. Below the buttons should display "Your card will be charged <amount>". Check that the amount matches the grand total.
+
+#### Checkout Success
+
+1. Must contain the title "Thankyou"
+2. Underline graphic must display under title.
+3. Subheading "Order summary"
+4. Below "A confirmation email will be sent to <user email>"
+5. A box containing the order details below, check this information matches the placed order.
+6. Return to shop button should return to all products page.
+
+####  Edit Product
+
+1. Must only be accessible for loged in superusers.
+2. Must contain the title "Product Administration"
+3. Underline graphic must display under title.
+4. Must display the subheading "Edit Product"
+5. Must contain a prefilled form with the information, room (dropdown), sku, name, description, price, delivery cost,
+depth, height, width, image url and current image.
+6. "Cancel" should direct to products page. 
+7. Check functionality by making changes to all fields and selecting "update product". This should then direct to the updated 
+product detail page. Check on products pages that the information has updated also.
+
+
+####  Add Product
+
+1. Must only be accessible for loged in superusers.
+2. Must contain the title "Product Administration"
+3. Underline graphic must display under title.
+4. Must display the subheading "Add Product"
+5. Must contain an empty form with the information, room (dropdown), sku, name, description, price, delivery cost,
+depth, height, width, image url and current image.
+6. "Cancel" should direct to products page. 
+7. Check functionality by adding information to all fields and selecting "Add product". This should then direct to the new 
+product detail page. Check on products pages that the new product displays.
+
+#### Favorites
+
+1. Must only be accessible by logged in users.
+2. Must contain the title "Favorites"
+3. Underline graphic must display under title.
+4. When no favorites have been added must display "You have no favorites" and a button "view products" that must direct to
+the products page"
+5. When products have been added they must display a grid containing each product. The grid will display 3 items on each row on tablet or larger 
+and 1 item per row on mobile.  
+6. Each item must display the product image, product name, product price and a button "View Item". When the button is
+selected users must be directed to that product details page.
+
+#### Help centre
+
+1. Must contain the title "Help Centre"
+2. Underline graphic must display under title.
+3. Subheading must be FAQ.
+4. Below should display an accordion with the questions in the accordion heads and the answers in the accordion bodies.
+5. Go to "help" in the django admin and select "add help", add a new question and answer then return to the help centre 
+to check if the new information is displaying.
+6. Go to "help" in the django admin and select the question that was created in the previous step, edit the information 
+then return to the help centre to check if the updated information is displaying.
+7. Return to "help" in the django admin and select the question that was edited in the previous step, delete the 
+FAQ, then return to the help centre to check if the FAQ was deleted.
+8. Below the accordion a table displaying the delivery policy must display. 
+
+
 
 
 
