@@ -323,7 +323,7 @@ displaying their image, name and quantity . Add different quantities of items an
 to see if the correct number of items was added. 
 9. The "Keep Shopping" button should direct to the all products page.
 
-#### Cart
+### Cart
 
 1. Should contain the title "Shopping Cart"
 2. Underline graphic must display under title.
@@ -340,7 +340,7 @@ page also.
 10. With items in the cart logout and go to the cart page, it must display blank with a subheading of "Your cart is empty".
 11. Log back in again and check if the items from the previous login are still in the cart.
 
-#### Checkout
+### Checkout
 
 1. The checkout page should only be accessible with items in the cart.
 2. Must contain the title "Checkout"
@@ -373,7 +373,7 @@ direct to the checkout success page with a toast message to confirm.
 5. A box containing the order details below, check this information matches the placed order.
 6. Return to shop button should return to all products page.
 
-####  Edit Product
+###  Edit Product
 
 1. Must only be accessible for loged in superusers.
 2. Must contain the title "Product Administration"
@@ -386,7 +386,7 @@ depth, height, width, image url and current image.
 product detail page. Check on products pages that the information has updated also.
 
 
-####  Add Product
+###  Add Product
 
 1. Must only be accessible for loged in superusers.
 2. Must contain the title "Product Administration"
@@ -398,7 +398,7 @@ depth, height, width, image url and current image.
 7. Check functionality by adding information to all fields and selecting "Add product". This should then direct to the new 
 product detail page. Check on products pages that the new product displays.
 
-#### Favorites
+### Favorites
 
 1. Must only be accessible by logged in users.
 2. Must contain the title "Favorites"
@@ -410,7 +410,7 @@ and 1 item per row on mobile.
 6. Each item must display the product image, product name, product price and a button "View Item". When the button is
 selected users must be directed to that product details page.
 
-#### Help centre
+### Help centre
 
 1. Must contain the title "Help Centre"
 2. Underline graphic must display under title.
@@ -424,8 +424,39 @@ then return to the help centre to check if the updated information is displaying
 FAQ, then return to the help centre to check if the FAQ was deleted.
 8. Below the accordion a table displaying the delivery policy must display. 
 
+### Devtools
+
+The website was extensively tested for responsiveness in Google Chrome Devtools on the following devices:
+
+- Moto G4
+- Galaxy S5
+- Pixel 2
+- Pixel 2 XL
+- Phone 5/SE
+- Phone 6/7/8
+- Phone 6/7/8 Plus
+- Phone X
+- Ipad
+- Ipad Pro
+- Surface Duo
+- Galaxy Fold
+
+### Browsers
+
+The website was tested for responsiveness on the following browsers:
+
+- Google Chrome
+- Safari
+- Microsoft Edge
+- Firefox
+
+### Friends and family
+
+I requested some feedback from friends and family on the how the website displays on their devices. It was thereby sucessfully tested on iPhone 7, iPhone 8,
+ iPhone X, iPad, two makes of laptop computer and one desktop this covered Chrome, Microsoft Edge and Safari. 
 
 
+### Return to [README.md](README.md)
 
 
 

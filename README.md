@@ -199,6 +199,14 @@ to navigate a website and keep their user experience as streamlined as possible 
 </details>
 
 <details>
+<summary>Favorites (Click for images)</summary>
+<p align="center">
+
+![Image](readme-images/wireframes/favorites-wireframes.png)
+</p>
+</details>
+
+<details>
 <summary>Help Centre (Click for images)</summary>
 <p align="center">
 
