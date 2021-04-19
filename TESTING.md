@@ -455,6 +455,33 @@ The website was tested for responsiveness on the following browsers:
 I requested some feedback from friends and family on the how the website displays on their devices. It was thereby sucessfully tested on iPhone 7, iPhone 8,
  iPhone X, iPad, two makes of laptop computer and one desktop this covered Chrome, Microsoft Edge and Safari. 
 
+### Fixed Bugs
+
+- Encountered a problem with the homepage background image having whitespace on the right, By using devtools I found this was due to 
+the `.row` Bootstrap class adding a -15px margin on the left and right and fixed the problem by adding the `ml-0` to the 
+div with the `.row` class.
+
+- After deploying to Heroku and initially an error was thrown when trying access the site, after debugging it was found to be 
+a spelling error on ALLOWED HOSTS on the settings.py file.
+
+- When deployed to Heroku, after adding and migrating help model, it was throwing an error when accessing the 
+help centre. I found this was due to the fact I was using the SQLite3 database for the local environment whilst the 
+deployed site was using PostgresSQL so the help model was only migrated to SQLite3. To fix this I temporarily added
+`DATABASE_URL` with the secret key from Heroku to my gitpod environment variables, migrated the new help model with 
+to the Postgres database with `python3 manage.py makemigrations` and `python3 manage.py migrate`. 
+
+- When setting up stripe payments, I had an issue where the Webhooks werent getting sent successfully, I found on 
+the code institute slack channel a another student had encountered a similar problem so was able to fix by adding 
+the `STRIPE WH SECRET` variable to my gitpod settings (instead of exporting via the cli) and opening port 8000
+in public view.
+
+- Another problem I encountered when setting up stripe was a webhook 300 error, after re-watching the tutorial on
+setting up stripe is descovered I had missed a `/` on the end when adding the url endpoint on stripe.
+
+- Html Validator showed a bug the `<div>` cannot be used as child element of `ul`, fixed by changing the `ul` elements
+to `div`. Also showed there were some `</div>` elements missing - this was also fixed.
+
+
 
 ### Return to [README.md](README.md)
 

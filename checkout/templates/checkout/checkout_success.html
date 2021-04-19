@@ -23,12 +23,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-6">
-
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-lg-8 offset-2">
+        <div class="col-12 col-lg-8 offset-lg-2">
             <p>A confirmation email will be sent to <strong>{{ order.email }}</strong></p>
             <div class="order-confirmation-wrapper p-2 border">
                 <div class="row">
@@ -36,7 +31,6 @@
                         <small class="text-muted">Order Info:</small>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Order Number</p>
@@ -89,7 +83,6 @@
                         <p class="mb-0">{{ order.full_name }}</p>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Address 1</p>
@@ -194,7 +187,7 @@
             </div>
         </div>
     </div>
-    <div class="col-4 offset-4 text-center">
+    <div class="col-12 text-center">
         {% if from_profile %}
         <a href="{% url 'profile' %}" class="btns mt-3 mb-3">Back to Profile <i class="fas fa-arrow-left"></i></a>
         {% else %}
