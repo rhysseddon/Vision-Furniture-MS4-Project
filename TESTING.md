@@ -164,6 +164,7 @@ a page where they can fill in a form to edit a product.
 2. "As a member of staff, I need to be able to easily view, update and delete customer orders."  
 
 When logging in to the Django admin, and selecting "orders" staff users have the ability to view, update and delete all customer orders.  
+
 <details>
 <summary>Staff User 2 (Click for images)</summary>
 <p align="center">
@@ -206,6 +207,8 @@ of items in the cart to test if the amount updates correctly.
 9. Repeat steps 3 to 7 to test in these views.
 10. Navbar should be fixed to the top of the page in all screen sizes and on all pages.
 
+![Image](readme-images/navbar-screenshot.png)
+
 ### Search Bar
 
 1. Must contain the placeholder "What is your Vision?".
@@ -214,11 +217,16 @@ of items in the cart to test if the amount updates correctly.
 4. Search for a keyword not found in a product name or description, products page must display with no results.
 5. When searching with the input empty, an error message must display. "Please enter search critera".
 
+![Image](readme-images/searchbar-screenshot.png)
+
 ### Footer
 
 1. Footer must display the same on all screen sizes.
 2. Social media links must display on the left, and should link to the correct social media sites.
 3. "Need Help" button should display on the right and should link to the help centre.
+
+![Image](readme-images/footer-screenshot.png)
+
 
 ### All Auth pages
 
@@ -236,6 +244,14 @@ All of the all auth pages must display an underline graphic below the title.
 8. When the form is successfully completed a message must display on the page "Verify your email address", an 
 information message must appear "Confirmation email sent to <emailaddress>".
 9. A check should be done to confirm the email was sent to the desired email address. 
+
+<details>
+<summary>Register Page(Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/signup-screenshot.png)
+</p>
+</details>
 
 #### Authentication
 
@@ -257,11 +273,27 @@ confirming the password reset must also be checked.
 13. Logout Page must display the title "Sign Out" and when selecting the button "Sign Out" all users must be signed out,
 users should be directed back to the home page and a success message must appear "You have signed out". 
 
+<details>
+<summary>Login Page(Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/signin-screenshot.png)
+</p>
+</details>
+
 ### Home Page
 
 1. The page must display a background image.
 2. A central title must display "Vision Furniture" and below "Refresh Your Space"
 3. A button must display "View Our Stock" and must direct to the products page where all of the products must display.
+
+<details>
+<summary>Home Page(Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/home-screenshot.png)
+</p>
+</details>
 
 ### Profile Page
 
@@ -276,6 +308,15 @@ was updated in the database by entering another page then entering my profile ag
 8. A table must display with the columns order number, date, items and order total.
 9. An order should be placed on the website to test if it appears in the order history with the correct values
 in the table.
+
+<details>
+<summary>Profile (Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/profile-screenshot.png)
+</p>
+</details>
+
 
 ### Products Page
 
@@ -324,6 +365,14 @@ displaying their image, name and quantity . Add different quantities of items an
 to see if the correct number of items was added. 
 9. The "Keep Shopping" button should direct to the all products page.
 
+<details>
+<summary>Product Detail (Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/product-detail-screenshot.png)
+</p>
+</details>
+
 ### Cart
 
 1. Should contain the title "Shopping Cart"
@@ -340,6 +389,14 @@ Remove all items from the cart to test if the cart displays blank with a subhead
 page also. 
 10. With items in the cart logout and go to the cart page, it must display blank with a subheading of "Your cart is empty".
 11. Log back in again and check if the items from the previous login are still in the cart.
+
+<details>
+<summary>Cart (Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/cart-screenshot.png)
+</p>
+</details>
 
 ### Checkout
 
@@ -358,12 +415,22 @@ displaying above.
 country (dropdown) and should be prefilled for logged in users.
 10. Below the form for logged in users "Save this information to my profile" with a checkbox must display. Test the functionality of this by 
 changing the information and once the order is placed check it has been saved in "my profile".
-11. Using the stripe test card numbers attempt to complete a payment, when selecting "Complete order" it should
-direct to the checkout success page with a toast message to confirm.
+11. Using the stripe test card number attempt to complete a payment, when selecting "Complete order" it should
+direct to the checkout success page with a toast message to confirm. The Stripe test card details are:
+- Card: 4242 4242 4242 4242
+- MM/YY, CVC and ZIP: Add any numbers.
 12. Login to the django admin to confirm the order was created.
 13. Check the user was sent an email confirmation of the order.
 14. "Adjust cart" button should direct to the shopping cart page.
 15. Below the buttons should display "Your card will be charged <amount>". Check that the amount matches the grand total.
+
+<details>
+<summary>Checkout (Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/checkout-screenshot.png)
+</p>
+</details>
 
 #### Checkout Success
 
@@ -373,6 +440,14 @@ direct to the checkout success page with a toast message to confirm.
 4. Below "A confirmation email will be sent to <user email>"
 5. A box containing the order details below, check this information matches the placed order.
 6. Return to shop button should return to all products page.
+
+<details>
+<summary>Checkout Success(Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/checkout-success-screenshot.png)
+</p>
+</details>
 
 ###  Edit Product
 
@@ -386,6 +461,13 @@ depth, height, width, image url and current image.
 7. Check functionality by making changes to all fields and selecting "update product". This should then direct to the updated 
 product detail page. Check on products pages that the information has updated also.
 
+<details>
+<summary>Edit Product(Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/edit-screenshot.png)
+</p>
+</details>
 
 ###  Add Product
 
@@ -399,6 +481,14 @@ depth, height, width, image url and current image.
 7. Check functionality by adding information to all fields and selecting "Add product". This should then direct to the new 
 product detail page. Check on products pages that the new product displays.
 
+<details>
+<summary>Add Product (Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/product-admin-screenshot.png)
+</p>
+</details>
+
 ### Favorites
 
 1. Must only be accessible by logged in users.
@@ -410,6 +500,14 @@ the products page"
 and 1 item per row on mobile.  
 6. Each item must display the product image, product name, product price and a button "View Item". When the button is
 selected users must be directed to that product details page.
+
+<details>
+<summary>Favorites (Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/favorites-screenshot.png)
+</p>
+</details>
 
 ### Help centre
 
@@ -424,6 +522,14 @@ then return to the help centre to check if the updated information is displaying
 7. Return to "help" in the django admin and select the question that was edited in the previous step, delete the 
 FAQ, then return to the help centre to check if the FAQ was deleted.
 8. Below the accordion a table displaying the delivery policy must display. 
+
+<details>
+<summary>Help Centre (Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/help-centre-screenshot.png)
+</p>
+</details>
 
 ### Devtools
 

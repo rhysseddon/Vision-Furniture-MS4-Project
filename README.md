@@ -366,7 +366,7 @@ information to my profile" checkbox on the checkout page. The form will contain:
 <summary>Cart (Click for image)</summary>
 <p align="center">
 
-![Image](readme-images/profile-screenshot.png)
+![Image](readme-images/cart-screenshot.png)
 </p>
 </details>
 
@@ -735,6 +735,7 @@ helped me with the design of the horizontal dropdown nav.
 
 - Friends and family for their honest opinions and checking responsiveness on their devices.
 - Code Institute Slack Channel for valuable guidance and opinions.
+- Code Institute tutors for assistance in my times of need.
 - Mentor Rohit Sharma for his excellent guidance and advice.
 
 
