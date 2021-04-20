@@ -116,15 +116,15 @@
         </div>
     </div>
     {% else %}
-        <div class="text-center">
-            <p class="lead mb-5 text-center">Your cart is empty.</p>
-            <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg text-center">
-                <span class="icon">
-                    <i class="fas fa-chevron-left"></i>
-                </span>
-                <span class="text-uppercase">Keep Shopping</span>
-            </a>
-        </div>
+    <div class="text-center">
+        <p class="lead mb-5 text-center">Your cart is empty.</p>
+        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg text-center">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span class="text-uppercase">Keep Shopping</span>
+        </a>
+    </div>
     {% endif %}
 </div>
 {% endblock %}

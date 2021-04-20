@@ -480,8 +480,10 @@ in public view.
 setting up stripe is descovered I had missed a `/` on the end when adding the url endpoint on stripe.
 
 - Html Validator showed a bug the `<div>` cannot be used as child element of `ul`, fixed by changing the `ul` elements
-to `div`. Also showed there were some `</div>` elements missing - this was also fixed.
-
+to `div`. Also showed there were some `</div>` elements missing - this was fixed.
+ 
+- Html validator had an error for a stray `</div>` with no start tag on the cart page. I found this was due to the end div element
+being outside the template if condition - this was fixed.
 
 
 ### Return to [README.md](README.md)
