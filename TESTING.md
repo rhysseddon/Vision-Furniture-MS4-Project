@@ -9,13 +9,13 @@
 
 ## Code Validation
 
-- [Validator.w3.org](http://Validator.w3.org)- Used for validation of HTML code. Any remaining errors
-are due to the Django templating language.
+- [Validator.w3.org](http://Validator.w3.org)- Used for validation of HTML code. 
 - [Jigsaw.w3.org/css-validator](http://Jigsaw.w3.org/css-validator) - Used for validation of CSS code.
 2 errors were remaining.  This was unable to be resolved as it was an error from the Bootstrap CDN.
 - [Jshint.com/](https://jshint.com/) - Used for validation of Javascript code. No remaining errors.
-- [Pep8online.com/](http://pep8online.com/) - Used for validating Python code. Remaining errors of line to 
-long were a personal decision to be left in the interest of readability.
+- [Pep8online.com/](http://pep8online.com/) - Used for validating Python code.
+- Flake 8 - Throughout development I used flake 8 in gitpod to keep the python code pep8 compliant by typing the
+command `python3 -m flake8` in the terminal. Any remaining warnings I have chosen to ignore.
 - [Google.com/test/mobile-friendly](http://Search.google.com/test/mobile-friendly) and found
 to be mobile friendly. 
 
