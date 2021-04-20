@@ -767,15 +767,15 @@ helped me with the design of the horizontal dropdown nav.
     - Chair - Shutterstock [https://www.shutterstock.com/image-photo/office-chair-black-leather-isolated-110603219](https://www.shutterstock.com/image-photo/office-chair-black-leather-isolated-110603219)
     - Lamp - Skylar Kang [https://www.pexels.com/photo/computer-and-lamp-on-table-in-office-6368845/](https://www.pexels.com/photo/computer-and-lamp-on-table-in-office-6368845/) 
  - Dining Room:
-    - Sideboard unit – charlotte may [https://www.pexels.com/photo/retro-fashioned-cabinet-with-elegant-lamps-in-cozy-flat-5824530/](https://www.pexels.com/photo/retro-fashioned-cabinet-with-elegant-lamps-in-cozy-flat-5824530/)
-    - Dining Table Set - Shutterstock [https://www.shutterstock.com/image-illustration/diningroom-interior-provence-3d-render-265627322](https://www.shutterstock.com/image-illustration/diningroom-interior-provence-3d-render-265627322)
-    - Teal Chest of drawers - Shutterstock [https://www.shutterstock.com/image-photo/real-photo-moroccan-trellis-carpet-placed-1183922602](https://www.shutterstock.com/image-photo/real-photo-moroccan-trellis-carpet-placed-1183922602)
-    - Vintage Chest of drawers - Shutterstock [https://www.shutterstock.com/image-illustration/vintage-chest-drawers-classic-style-miror-1234079215](https://www.shutterstock.com/image-illustration/vintage-chest-drawers-classic-style-miror-1234079215)
+    - Sideboard unit – charlotte may [See Here](https://www.pexels.com/photo/retro-fashioned-cabinet-with-elegant-lamps-in-cozy-flat-5824530/)
+    - Dining Table Set - Shutterstock [See Here](https://www.shutterstock.com/image-illustration/diningroom-interior-provence-3d-render-265627322)
+    - Teal Chest of drawers - Shutterstock [See Here](https://www.shutterstock.com/image-photo/real-photo-moroccan-trellis-carpet-placed-1183922602)
+    - Vintage Chest of drawers - Shutterstock [See Here](https://www.shutterstock.com/image-illustration/vintage-chest-drawers-classic-style-miror-1234079215)
  - Living Room:
-    - Guilded mirror - Nadine Wuchenauer [https://www.pexels.com/photo/oval-brown-wooden-framed-hanging-mirror-1528975/](https://www.pexels.com/photo/oval-brown-wooden-framed-hanging-mirror-1528975/)
-    - Wing chair - Evg culture [https://www.pexels.com/photo/brown-and-white-armchair-1148955/](https://www.pexels.com/photo/brown-and-white-armchair-1148955/)
-    - Vintage Lamp - Krish Chaitu[https://www.pexels.com/photo/black-and-brown-lantern-on-table-6145852/](https://www.pexels.com/photo/black-and-brown-lantern-on-table-6145852/)
-    - Chaise lounge – Charlotte May[https://www.pexels.com/photo/vintage-sofa-near-window-in-room-5824804/](https://www.pexels.com/photo/vintage-sofa-near-window-in-room-5824804/)
+    - Guilded mirror - Nadine Wuchenauer [See Here](https://www.pexels.com/photo/oval-brown-wooden-framed-hanging-mirror-1528975/)
+    - Wing chair - Evg culture [See Here](https://www.pexels.com/photo/brown-and-white-armchair-1148955/)
+    - Vintage Lamp - Krish Chaitu[See Here](https://www.pexels.com/photo/black-and-brown-lantern-on-table-6145852/)
+    - Chaise lounge – Charlotte May[See Here](https://www.pexels.com/photo/vintage-sofa-near-window-in-room-5824804/)
 
 ### Acknowledgements
 

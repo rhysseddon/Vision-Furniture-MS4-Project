@@ -12,7 +12,7 @@
 
 - [Validator.w3.org](http://Validator.w3.org)- Used for validation of HTML code. See fixed bugs.
 - [Jigsaw.w3.org/css-validator](http://Jigsaw.w3.org/css-validator) - Used for validation of CSS code.
-2 errors were remaining.  This was unable to be resolved as it was an errors from the Bootstrap CDN.
+2 errors were remaining.  This was unable to be resolved as it was errors from the Bootstrap CDN.
 - [Jshint.com/](https://jshint.com/) - Used for validation of Javascript code. No remaining errors.
 - [Pep8online.com/](http://pep8online.com/) - Used for validating Python code.
 - Flake 8 - Throughout development I used flake 8 in gitpod to keep the python code pep8 compliant by typing the
@@ -113,7 +113,7 @@ upon purchasing, so can view them in there emails too.
 3. "As a returning user to the site, I would like to edit my personal details on my profile."  
 
 On the profile page returning users have the ability to update their information and also when checking out
-they have the ability to save the infromation to their profile by ticking the checkbox.
+they have the ability to save the information to their profile by ticking the checkbox.
 
 <details>
 <summary>Returning User 3 (Click for images)</summary>
@@ -191,17 +191,17 @@ When logging in to the Django admin, and selecting "Help" staff users have the a
 ### Navbar
 
 1. Vision Furniture logo must link to homepage.
-2. All Products must link to a page displaying all products.
+2. "All Products" must link to a page displaying all products.
 3. "Shop by room" must drop a full width horizontal menu containing every room.
 4. Search Bar must be visible central in the navbar on desktop and full width below the navbar in small screen sizes,
 see search bar test case for functionality test.
-5. Favorites link must only be visible for logged in users and should link to the favorites page.
-6. My account must be a visible link and when selected for: 
+5. "Favorites" link must only be visible for logged in users and should link to the favorites page.
+6. "My account" must be a visible link and when selected for: 
 - Unregistered users must display links to "Register" and "Login". 
 - Users the dropdown must display links to "My Profile" and "Logout". 
 - Super users must display links to "Product Administration", "My Profile" and "Logout".
 - All links must direct to the desired location. (See Registering and Authentication for functionality)
-7. Cart link must be visible and must display the cart total below. To test this add, delete and update a number
+7. "Cart" link must be visible and must display the cart total below. To test this add, delete and update a number
 of items in the cart to test if the amount updates correctly.
 8. Using devtools switch to tablet and mobile views, all links must now be contained inside a burger icon menu.
 9. Repeat steps 3 to 7 to test in these views.
@@ -242,7 +242,7 @@ All of the all auth pages must display an underline graphic below the title.
 6. Must display an error message if the passwords entered do not match.
 7. An error message must display if any of the fields are not completed to the correct format.
 8. When the form is successfully completed a message must display on the page "Verify your email address", an 
-information message must appear "Confirmation email sent to <emailaddress>".
+information message must appear "Confirmation email sent to *emailaddress*".
 9. A check should be done to confirm the email was sent to the desired email address. 
 
 <details>
@@ -264,7 +264,7 @@ directing to the register page.
 6. A checkbox must display "Remember Me", and when checked the users information should be saved, so login is not 
 required.
 7. Home and Sign in buttons must display and direct to the desired locations.
-8. Forgot password link must display and when selected should direct to the all auth pages to reset the password.
+8. "Forgot password" link must display and when selected should direct to the all auth pages to reset the password.
 9. A check must be carried out the test if the reset password email was sent.
 10. On the email a link should be selected to return to the site where the user must be able to enter a new password.
 11. The user should then be prompted with a message on the page "Password reset". The confirmation email
@@ -338,7 +338,7 @@ must display and a sub-heading of that room should display.
 and 1 item per row on mobile.  
 10. Each item must display the product image, product name, product price and a button "View Item". When the button is
 selected users must be directed to that product details page.
-11. For users logged in as superusers an edit and delete link must display. The edit link must redirect to the
+11. For users logged in as superusers an "Edit" and "Delete" links must display. The edit link must redirect to the
 edit product page and the delete link must remove the item. This can be tested by then searching for the deleted item.
 12. A fixed up arrow button must display in the bottom right corner and must direct users to the top of the page.
 
@@ -357,10 +357,10 @@ the image must display on the left with the product details on the right.
  - Repeat these step on another product.
 5. For superusers, below the title must display the links Edit|Delete. The edit link must redirect to the
 edit product page and the delete link must remove the item. This can be tested by then searching for the deleted item.
-6. Below these links the details of price, product discription, dimensions, delivery cost must display.
+6. Below these links the details of price, product description, dimensions, delivery cost must display.
 7. A box labelled quanitity must display, followed by the buttons "Keep Shopping and Add to Cart".
 8. Test the quanity box plus and minus button functionality. And the add to cart button functionality which should trigger
-a toast message "Success, Added <item> to your cart". The toast should also include all of the items in the cart
+a toast message "Success, Added *item* to your cart". The toast should also include all of the items in the cart
 displaying their image, name and quantity . Add different quantities of items and check the cart page and the toast 
 to see if the correct number of items was added. 
 9. The "Keep Shopping" button should direct to the all products page.
@@ -377,12 +377,12 @@ to see if the correct number of items was added.
 
 1. Should contain the title "Shopping Cart"
 2. Underline graphic must display under title.
-3. On meduim screens sizes and above must display a table containing product info, price, quantity and total.
-4. Check functionality of quantity box, increase and decrease the quantity and select update to test if the price
+3. On medium screens sizes and above must display a table containing product info, price, quantity and total.
+4. Check functionality of quantity box, increase and decrease the quantity and select "Update" to test if the price
 and the below totals update correctly.  
-5. Selecting remove should remove the item from the page and the totals should update accordingly along with a toast success message. 
+5. Selecting "Remove" should remove the item from the page and the totals should update accordingly along with a toast success message. 
 Remove all items from the cart to test if the cart displays blank with a subheading of "Your cart is empty"
-6. On small screensize products must display full width for each product.
+6. On small screen sizes products must display full width for each product.
 7. Test functionality of "See our delivery policy button", which must direct to the help centre.
 8. The "Keep Shopping" button should direct to the all products page.
 9. The "Secure Checkout" button should direct to the checkout page and the products in the cart should display on this 
@@ -404,13 +404,13 @@ page also.
 2. Must contain the title "Checkout"
 3. Underline graphic must display under title.
 4. Logged out users should be prompted to "login / register now to save your delivery information and order history",
-chech the functionality of the register/login buttons. Below them should display "In a hurry? Checkout below".
-5. On medium and lager screensizes delivery information must display on the left with order summary on the right.
+check the functionality of the "Register" and "Login" buttons. Below them should display "In a hurry? Checkout below".
+5. On medium and large screen sizes delivery information must display on the left with order summary on the right.
 6. On small screen sizes order delivery information and order summary must display full width with order summary
 displaying above.
 7. Order summary must display the subheading "Order summary" and must contain product image, name, quantity, total
 , subtotal and grand total.
-8. Delivery information must contain the subheadings "Details", "Delivery" and payment".
+8. Delivery information must contain the subheadings "Details", "Delivery" and Payment".
 9. The delivery information form should full name, email address, phone number, street address 1, street address 2, town or city, county, postcode and
 country (dropdown) and should be prefilled for logged in users.
 10. Below the form for logged in users "Save this information to my profile" with a checkbox must display. Test the functionality of this by 
@@ -419,10 +419,10 @@ changing the information and once the order is placed check it has been saved in
 direct to the checkout success page with a toast message to confirm. The Stripe test card details are:
 - Card: 4242 4242 4242 4242
 - MM/YY, CVC and ZIP: Add any numbers.
-12. Login to the django admin to confirm the order was created.
+12. Login to the Django admin to confirm the order was created.
 13. Check the user was sent an email confirmation of the order.
 14. "Adjust cart" button should direct to the shopping cart page.
-15. Below the buttons should display "Your card will be charged <amount>". Check that the amount matches the grand total.
+15. Below the buttons should display "Your card will be charged *amount*". Check that the amount matches the grand total.
 
 <details>
 <summary>Checkout (Click for image)</summary>
@@ -436,8 +436,8 @@ direct to the checkout success page with a toast message to confirm. The Stripe 
 
 1. Must contain the title "Thankyou"
 2. Underline graphic must display under title.
-3. Subheading "Order summary"
-4. Below "A confirmation email will be sent to <user email>"
+3. Sub-heading "Order summary"
+4. Below "A confirmation email will be sent to *user email*"
 5. A box containing the order details below, check this information matches the placed order.
 6. Return to shop button should return to all products page.
 
@@ -451,14 +451,14 @@ direct to the checkout success page with a toast message to confirm. The Stripe 
 
 ###  Edit Product
 
-1. Must only be accessible for loged in superusers.
+1. Must only be accessible for logged in superusers.
 2. Must contain the title "Product Administration"
 3. Underline graphic must display under title.
-4. Must display the subheading "Edit Product"
-5. Must contain a prefilled form with the information, room (dropdown), sku, name, description, price, delivery cost,
+4. Must display the sub-heading "Edit Product"
+5. Must contain a pre-filled form with the information, room (dropdown), sku, name, description, price, delivery cost,
 depth, height, width, image url and current image.
 6. "Cancel" should direct to products page. 
-7. Check functionality by making changes to all fields and selecting "update product". This should then direct to the updated 
+7. Check functionality by making changes to all fields and selecting "Update product". This should then direct to the updated 
 product detail page. Check on products pages that the information has updated also.
 
 <details>
@@ -471,10 +471,10 @@ product detail page. Check on products pages that the information has updated al
 
 ###  Add Product
 
-1. Must only be accessible for loged in superusers.
+1. Must only be accessible for logged in superusers.
 2. Must contain the title "Product Administration"
 3. Underline graphic must display under title.
-4. Must display the subheading "Add Product"
+4. Must display the sub-heading "Add Product"
 5. Must contain an empty form with the information, room (dropdown), sku, name, description, price, delivery cost,
 depth, height, width, image url and current image.
 6. "Cancel" should direct to products page. 
@@ -513,13 +513,13 @@ selected users must be directed to that product details page.
 
 1. Must contain the title "Help Centre"
 2. Underline graphic must display under title.
-3. Subheading must be FAQ.
+3. Sub-heading must be FAQs.
 4. Below should display an accordion with the questions in the accordion heads and the answers in the accordion bodies.
-5. Go to "help" in the django admin and select "add help", add a new question and answer then return to the help centre 
+5. Go to "help" in the Django admin and select "add help", add a new question and answer then return to the help centre 
 to check if the new information is displaying.
-6. Go to "help" in the django admin and select the question that was created in the previous step, edit the information 
+6. Go to "help" in the Django admin and select the question that was created in the previous step, edit the information 
 then return to the help centre to check if the updated information is displaying.
-7. Return to "help" in the django admin and select the question that was edited in the previous step, delete the 
+7. Return to "help" in the Django admin and select the question that was edited in the previous step, delete the 
 FAQ, then return to the help centre to check if the FAQ was deleted.
 8. Below the accordion a table displaying the delivery policy must display. 
 
