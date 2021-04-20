@@ -700,7 +700,7 @@ to use the AWS configuration when deploying to Heroku. Remove the COLLECTSTATIC 
 - The site is based on the Boutique Ado code insitute tutorial project.
 - This post on [stackoverflow.com](https://stackoverflow.com/questions/48777214/bootstrap-4-how-to-horizontally-align-elements-inside-a-drop-down) 
 helped me with the design of the horizontal dropdown nav.
-- Helped with my understanding of ManyToManyFields [https://www.revsys.com](https://www.revsys.com/tidbits/tips-using-djangos-manytomanyfield/)
+- This helped with my understanding of ManyToManyFields [https://www.revsys.com](https://www.revsys.com/tidbits/tips-using-djangos-manytomanyfield/)
 
 ### Images
 

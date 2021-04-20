@@ -485,6 +485,10 @@ to `div`. Also showed there were some `</div>` elements missing - this was fixed
 - Html validator had an error for a stray `</div>` with no start tag on the cart page. I found this was due to the end div element
 being outside the template if condition - this was fixed.
 
+- On screens sizes 320px wide and smaller the order number was overflowing outside of its container - fixed by adding `word-break: break-all;`to 
+the parent div. I found the solution [Here](https://stackoverflow.com/questions/12196885/text-flowing-out-of-div#:~:text=You%20need%20to%20apply%20the,from%20overflowing%20its%20content%20box.)
+
+
 
 ### Return to [README.md](README.md)
 
