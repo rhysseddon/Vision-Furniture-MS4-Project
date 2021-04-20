@@ -115,9 +115,8 @@
             </a>
         </div>
     </div>
-    <div class="row">
-        <div class="col text-center">
-            {% else %}
+    {% else %}
+        <div class="text-center">
             <p class="lead mb-5 text-center">Your cart is empty.</p>
             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg text-center">
                 <span class="icon">
@@ -125,9 +124,8 @@
                 </span>
                 <span class="text-uppercase">Keep Shopping</span>
             </a>
-            {% endif %}
         </div>
-    </div>
+    {% endif %}
 </div>
 {% endblock %}
 
