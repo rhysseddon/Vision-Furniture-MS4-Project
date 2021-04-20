@@ -753,29 +753,27 @@ helped me with the design of the horizontal dropdown nav.
  - Hero Image was from Sammsara Luxury Modern Home [View](https://www.pexels.com/photo/assorted-gold-plated-table-figurines-1099816/)
  - Underline title graphic from pngitem.com [View](https://www.pngitem.com/middle/JxiooJ_underline-design-and-simple-design-hand-drawn-elements/)
  - Bathroom:
-    - Towel hooks, Karolina Grabowska [https://www.pexels.com/photo/wooden-hanger-with-towels-and-body-brushes-4210341/](https://www.pexels.com/photo/wooden-hanger-with-towels-and-body-brushes-4210341/)
-    - Vanity Unit, Shutterstock [https://www.shutterstock.com/image-photo/large-double-vanity-master-bathroom-new-1247862721](https://www.shutterstock.com/image-photo/large-double-vanity-master-bathroom-new-1247862721)
+    - Towel hooks, Karolina Grabowska [View](https://www.pexels.com/photo/wooden-hanger-with-towels-and-body-brushes-4210341/)
  - Bedroom:    
-    - Bedside table – Cats coming [https://www.pexels.com/photo/white-shade-table-lamp-near-bed-707579/](https://www.pexels.com/photo/white-shade-table-lamp-near-bed-707579/)
-    - Scandinavian Chest of Drawers [https://www.shutterstock.com/image-illustration/blank-wall-mock-cozy-nursery-interior-1901224135](https://www.shutterstock.com/image-illustration/blank-wall-mock-cozy-nursery-interior-1901224135)
-    - Grey Chest of Drawers, Shutterstock [https://www.shutterstock.com/image-photo/gold-round-mirror-above-grey-cabinet-1070451794](https://www.shutterstock.com/image-photo/gold-round-mirror-above-grey-cabinet-1070451794)
+    - Bedside table – Cats coming [View](https://www.pexels.com/photo/white-shade-table-lamp-near-bed-707579/)
+    - Scandinavian Chest of Drawers [View](https://www.shutterstock.com/image-illustration/blank-wall-mock-cozy-nursery-interior-1901224135)
+    - Grey Chest of Drawers, Shutterstock [View](https://www.shutterstock.com/image-photo/gold-round-mirror-above-grey-cabinet-1070451794)
  - Kitchen:
-    - Stools – Lara Santos [https://www.pexels.com/photo/shabby-stylish-design-of-coffee-shop-3741149/](https://www.pexels.com/photo/shabby-stylish-design-of-coffee-shop-3741149/)
-    - Kitchen Island - Shutterstock [https://www.shutterstock.com/image-photo/chicago-il-usa-january-6-2020-1649825017](https://www.shutterstock.com/image-photo/chicago-il-usa-january-6-2020-1649825017)
+    - Stools – Lara Santos [View](https://www.pexels.com/photo/shabby-stylish-design-of-coffee-shop-3741149/)
+    - Kitchen Island - Shutterstock [View](https://www.shutterstock.com/image-photo/chicago-il-usa-january-6-2020-1649825017)
  - Office:
-    - Desk - Max Vakhtbovych [https://www.pexels.com/photo/interior-of-room-with-table-and-chair-6186504/](https://www.pexels.com/photo/interior-of-room-with-table-and-chair-6186504/)
-    - Chair - Shutterstock [https://www.shutterstock.com/image-photo/office-chair-black-leather-isolated-110603219](https://www.shutterstock.com/image-photo/office-chair-black-leather-isolated-110603219)
-    - Lamp - Skylar Kang [https://www.pexels.com/photo/computer-and-lamp-on-table-in-office-6368845/](https://www.pexels.com/photo/computer-and-lamp-on-table-in-office-6368845/) 
+    - Desk - Max Vakhtbovych [View](https://www.pexels.com/photo/interior-of-room-with-table-and-chair-6186504/)
+    - Chair - Shutterstock [View](https://www.shutterstock.com/image-photo/office-chair-black-leather-isolated-110603219)
+    - Lamp - Skylar Kang [View](https://www.pexels.com/photo/computer-and-lamp-on-table-in-office-6368845/) 
  - Dining Room:
-    - Sideboard unit – charlotte may [See Here](https://www.pexels.com/photo/retro-fashioned-cabinet-with-elegant-lamps-in-cozy-flat-5824530/)
-    - Dining Table Set - Shutterstock [See Here](https://www.shutterstock.com/image-illustration/diningroom-interior-provence-3d-render-265627322)
-    - Teal Chest of drawers - Shutterstock [See Here](https://www.shutterstock.com/image-photo/real-photo-moroccan-trellis-carpet-placed-1183922602)
-    - Vintage Chest of drawers - Shutterstock [See Here](https://www.shutterstock.com/image-illustration/vintage-chest-drawers-classic-style-miror-1234079215)
+    - Sideboard unit – charlotte may [View](https://www.pexels.com/photo/retro-fashioned-cabinet-with-elegant-lamps-in-cozy-flat-5824530/)
+    - Teal Chest of drawers - Shutterstock [View](https://www.shutterstock.com/image-photo/real-photo-moroccan-trellis-carpet-placed-1183922602)
+    - Vintage Chest of drawers - Shutterstock [View](https://www.shutterstock.com/image-illustration/vintage-chest-drawers-classic-style-miror-1234079215)
  - Living Room:
-    - Guilded mirror - Nadine Wuchenauer [See Here](https://www.pexels.com/photo/oval-brown-wooden-framed-hanging-mirror-1528975/)
-    - Wing chair - Evg culture [See Here](https://www.pexels.com/photo/brown-and-white-armchair-1148955/)
-    - Vintage Lamp - Krish Chaitu[See Here](https://www.pexels.com/photo/black-and-brown-lantern-on-table-6145852/)
-    - Chaise lounge – Charlotte May[See Here](https://www.pexels.com/photo/vintage-sofa-near-window-in-room-5824804/)
+    - Guilded mirror - Nadine Wuchenauer [View](https://www.pexels.com/photo/oval-brown-wooden-framed-hanging-mirror-1528975/)
+    - Wing chair - Evg culture [View](https://www.pexels.com/photo/brown-and-white-armchair-1148955/)
+    - Vintage Lamp - Krish Chaitu[View](https://www.pexels.com/photo/black-and-brown-lantern-on-table-6145852/)
+    - Chaise lounge – Charlotte May[View](https://www.pexels.com/photo/vintage-sofa-near-window-in-room-5824804/)
 
 ### Acknowledgements
 
