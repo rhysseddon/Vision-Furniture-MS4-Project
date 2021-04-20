@@ -28,13 +28,13 @@ The live deployed website can be found [Here](https://vision-furniture.herokuapp
 Vision Furniture is an e-commerce store selling stylish vintage furniture, where people can shop for furniture from the comfort 
 of their own home.
 The website is entirely fictional and was created for my fourth milestone project for a software development course I am undertaking 
-at the code institute.
+at the Code Institute.
 
 # User Stories
 
 ### New User
 
-As a new user of the site a want to be able to:  
+As a new user of the site I want to be able to:  
 1.	Browse all products – to gain some inspiration on what to buy.
 2.	Sort order of products – to find the cheapest or most expensive products.
 3.	Find products that go in a particular room.
@@ -66,12 +66,12 @@ question that is not already in FAQs. Or delete a FAQ if it is no longer relevan
 The world has changed a lot in 2020/21, property sales have sharply risen, and people are spending more time at home hence a high demand 
 for furniture. Online shopping has also increased significantly which is a trend which is expected to remain.  
 Through the rise of Instagram and other social media sites people now have many interior design ideas at their fingertips and 
-the “Vintage” theme is particularly popular. For these reasons, a new vintage style furniture store website is positioned to do very 
+the “Vintage” theme is particularly popular. For these reasons, a new furniture store website is positioned to do very 
 well at this current time.
 
 ### Research
 
-I researched 3 e commerce furniture stores - [Johnlewis.com](https://Johnlewis.com), [MADE.com](https://made.com) and [Habitat.co.uk](https://Habitat.co.uk):
+I researched 3 e-commerce furniture stores - [Johnlewis.com](https://Johnlewis.com), [MADE.com](https://made.com) and [Habitat.co.uk](https://Habitat.co.uk):
 
 -	All had a similar navbar layout - logo on the left, search bar in the middle, profile and checkout on the right.
 -	All had a mainly black and white theme which accentuated the colours of the products in the pictures.
@@ -79,9 +79,9 @@ I researched 3 e commerce furniture stores - [Johnlewis.com](https://Johnlewis.c
 -	To give their customers inspiration MADE had an “ideas” area, showing images of impressively designed rooms containing their products, 
 if you click on the images you can see the products with the product descriptions.
 -	Habitat had a “new in” section where customers can see recently added products.
--	All had a shop by room menu, containing Living room, dining room, bedroom, kitchen, office and bathroom.
+-	All had a shop by room menu, containing living room, dining room, bedroom, kitchen, office and bathroom.
 -	John Lewis and Habitat had customer reviews for each product.
--	Made and John Lewis had a favourites or wish list feature for customers to save products without adding to their basket. 
+-	Made and John Lewis had a favorites or wish list feature for customers to save products without adding to their basket. 
 
 ## Scope 
 
@@ -91,10 +91,10 @@ Based upon the strategy and research,  some design features that I aim to includ
 -	A shopping bag for customers to add their products and see what the total charges will come to.
 -	A “new in” area for the customers to see if there are any new products on the site since they last visited.
 -	Profile page for customers to save their delivery details and see their previous orders.
--	Contact us or About section for customers to query anything which is not covered on the website itself.
+-	"Contact us" or "About" section for customers to query anything which is not covered on the website itself.
 -	FAQ section to save on admin time replying to customer queries and to streamline the user experience.
 -	On each product page the ability to sort the products by name (A-Z) or price (high to low).
--	A favourites feature for customers to save a product to their profile - if they are not ready to buy but 
+-	A favorites feature for customers to save a product to their profile - if they are not ready to buy but 
 wish to save the product for a future purchase.  
 
 For now, I will not be including:
@@ -222,7 +222,7 @@ to navigate a website and keep their user experience as streamlined as possible 
 ### Navbar
 
 -	All pages will contain the navbar.
--	Vision furniture logo on left side next to all products and shop by room link.
+-	Vision Furniture logo on left side next to all products and shop by room link.
 -   All products link will link to all products page.
 -   Shop by room will be a full width dropdown with links to bedroom, dining room, bathroom, living room, kitchen
 and office product pages.
@@ -232,7 +232,7 @@ and office product pages.
 -   My account when logged in as superuser will dropdown links to product admin, help admin, my profile and logout.
 -   My account when logged in as user will dropdown links to my profile and logout.
 -   My account when not logged in will dropdown links to register and login.
--   In tablet view or smaller all links will be contained in a burger dropdown icon on the right side and the search 
+-   In tablet view or smaller, all links will be contained in a burger dropdown icon on the right side and the search 
 bar will be below the navbar full width.
 
 
@@ -246,7 +246,7 @@ bar will be below the navbar full width.
 
 ### Footer
 
--   All page will contain the same Footer.
+-   All page will contain the same footer.
 -   Social media links on left, to Facebook, Instagram and Twitter.
 -   Link to help centre page on right, displaying "Need Help".
 
@@ -262,7 +262,7 @@ bar will be below the navbar full width.
 
 - A full height and width background furniture image.
 - A central title "Vision Furniture" and below "refresh your space".
-- A central "view our stock" button linking to all products page"
+- A central "view our stock" button linking to all products page.
 
 <details>
 <summary>Home (Click for image)</summary>
@@ -277,7 +277,7 @@ bar will be below the navbar full width.
 - Displaying all products or a specific products from each room, depending on where the user has linked from.
 - Central title informing what products are displaying.
 - Below a graphic will display underlining the title.
-- Below on the left will display the number of product displaying.
+- Below on the left will display the number of products displaying.
 - On the right will be a dropdown menu for the user to sort products by:
     - Price (low to high)
     - Price (high to low)
@@ -323,7 +323,7 @@ delete will remove the item.
 - Will display the central heading "My Profile".
 - Below a graphic will display underlining the title.
 - Subheading below displaying "Your delivery Information"
-- Below will be a central django crispy form, which will be prefilled if the user has ticked the "save this 
+- Below will be a central Django crispy form, which will be prefilled if the user has ticked the "save this 
 information to my profile" checkbox on the checkout page. The form will contain:
     - Phone number
     - Street address 1
@@ -348,7 +348,7 @@ information to my profile" checkbox on the checkout page. The form will contain:
 ### Cart Page
 
 - Displaying all products that have been added to cart.
-- Central title "Shopping cart"
+- Central title "Shopping Cart"
 - Below a graphic will display underlining the title.
 - A table containing the users products added to cart.
 - The columns for the table will be product info, price, quantity and total.
@@ -359,7 +359,7 @@ information to my profile" checkbox on the checkout page. The form will contain:
 - A link to the delivery policy on the help centre page.
 - Subtotal which will be total of all the items plus delivery cost.
 - Grand total will be delivery plus subtotal.
-- Below buttons to "keep shopping" and to secure checkout"
+- Below buttons to "keep shopping" and to "secure checkout"
 - If there are no items in the cart, a subheading will display "Your cart is empty" and a "keep shopping" button.
 
 <details>
@@ -374,7 +374,7 @@ information to my profile" checkbox on the checkout page. The form will contain:
 
 - Central title "Checkout"
 - Below a graphic will display underlining the title.
-- I if the user is not registered or logged in, "Register / Login now to save your delivery information and order history"
+- If the user is not registered or logged in, "Register / Login now to save your delivery information and order history"
 will display and buttons to link to register and log in pages. Below will display - "In a hurry? Checkout below"
 - In laptop and tablet delivery information will be a left column and order summary on the right.
 - In mobile view Order summary will display above delivery information.
@@ -411,7 +411,7 @@ which will send payment to stripe.
 
 ### Checkout Success
 
-- Central title "Thankyou!"
+- Central title "Thank you!"
 - Below a graphic will display underlining the title.
 - Display "A confirmation email will be sent to (users email address)"
 - A box containing a table of: 
@@ -467,7 +467,7 @@ which will send payment to stripe.
 - Below a graphic will display underlining the title.
 - Subheading "FAQ"
 - Bootstrap accordion displaying questions and answers. 
-- Questions and answers will be customised in the django admin.
+- Questions and answers will be customised in the Django admin.
 - Subheading "Delivery Policy".
 - Table displaying delivery cost information.
 
@@ -576,7 +576,7 @@ You will need to be signed up to the following services:
 
 ### Local Deployment On Gitpod
 
-1. After cloning repository on gitHub. Go to your chosen IDE environment and open the clone directory.
+1. After cloning repository on GitHub. Go to your chosen IDE environment and open the clone directory.
 2. Install the libraries from the requirements.txt, in the terminal type - `pip3 install -r requirements.txt`.
 3. Set your environment variables in your gitPod settings or in an env.py file.
 4. If setting variables within an env file add this to the .gitignore file so your variables are not exposed 
@@ -618,10 +618,10 @@ DATABASES = {
 13. Create a Procfile and add `web: gunicorn vision_furniture.wsgi:application`
 14. Login to Heroku through the cli `heroku login -i`
 15. Temporarily disable collect static by typing `heroku config:set DISABLE_COLLECTSTATIC=1`
-16. Add `vision-furniture.herokuapp.com, 'localhost' to ALLOWED_HOSTS in settings.py.
+16. Add `vision-furniture.herokuapp.com, localhost' to ALLOWED_HOSTS in settings.py.
 17. The app can now be deployed by typing in the terminal `heroku git:remote -a vision-furniture` and `git push heroku master`
-18. On heroku dashboard under "Deploy" set "Deployment method" to connect to github. Under "Automatic Deplays" set 
-"Enable automatic deploy" so the code is automatically deployed to heroku and github.
+18. On Heroku dashboard under "Deploy" set "Deployment method" to connect to Gitub. Under "Automatic Deplays" set 
+"Enable automatic deploy" so the code is automatically deployed to Heroku and GitHub.
 
 ### Add Static Files to AWS
 
