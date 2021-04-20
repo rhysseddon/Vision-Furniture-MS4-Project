@@ -4,14 +4,15 @@
 * [Code Validation](#Code-Validation)
 * [User Story Testing](#User-Story-Testing)
 * [Manual Testing](#Manual-Testing)
+* [Fixed Bugs](#Fixed-Bugs)
 
 #### Return to [README.md](README.md)
 
 ## Code Validation
 
-- [Validator.w3.org](http://Validator.w3.org)- Used for validation of HTML code. 
+- [Validator.w3.org](http://Validator.w3.org)- Used for validation of HTML code. See fixed bugs.
 - [Jigsaw.w3.org/css-validator](http://Jigsaw.w3.org/css-validator) - Used for validation of CSS code.
-2 errors were remaining.  This was unable to be resolved as it was an error from the Bootstrap CDN.
+2 errors were remaining.  This was unable to be resolved as it was an errors from the Bootstrap CDN.
 - [Jshint.com/](https://jshint.com/) - Used for validation of Javascript code. No remaining errors.
 - [Pep8online.com/](http://pep8online.com/) - Used for validating Python code.
 - Flake 8 - Throughout development I used flake 8 in gitpod to keep the python code pep8 compliant by typing the
@@ -455,7 +456,7 @@ The website was tested for responsiveness on the following browsers:
 I requested some feedback from friends and family on the how the website displays on their devices. It was thereby sucessfully tested on iPhone 7, iPhone 8,
  iPhone X, iPad, two makes of laptop computer and one desktop this covered Chrome, Microsoft Edge and Safari. 
 
-### Fixed Bugs
+## Fixed Bugs
 
 - Encountered a problem with the homepage background image having whitespace on the right, By using devtools I found this was due to 
 the `.row` Bootstrap class adding a -15px margin on the left and right and fixed the problem by adding the `ml-0` to the 

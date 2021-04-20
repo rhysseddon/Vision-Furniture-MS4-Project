@@ -32,7 +32,8 @@ nav a {
 }
 
 .search-bar {
-    margin-top: 0;
+    border-color: #c6c6c7;
+    border-width: 1px;
     border-radius: 0;
 }
 
