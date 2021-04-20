@@ -33,8 +33,9 @@ nav a {
 
 .search-bar {
     border-color: #c6c6c7;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 0;
+    margin: 0px;
 }
 
 /* The hero image */
@@ -270,7 +271,7 @@ nav a {
     }
 
     .product-box {
-        padding: 20px 30px;
+        padding: 10px 10px;
     }
 
     .social-icons {
@@ -280,7 +281,7 @@ nav a {
 }
 
 /* Mobile view */
-@media (max-width: 500px) {
+@media (max-width: 550px) {
 
     /* Sizes logo */
     .logo-image {
@@ -289,6 +290,10 @@ nav a {
 
     .home-nav-padding {
         padding-top: 95px;
+    }
+
+    .product-box {
+        padding: 20px 20px;
     }
 
     .social-icons {
