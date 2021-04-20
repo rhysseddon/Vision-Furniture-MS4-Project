@@ -299,6 +299,32 @@ delete will remove the item.
 </p>
 </details>
 
+### Registering And Authentication
+
+- The site will use the Django allauth pages for registering and authentication. These pages will be modified 
+to match the layout of the rest of the site. The modifications will be:
+    - Central titles and content.
+    - Below a graphic will display underlining the title.
+    - Central forms on all allauth pages.
+    - Central submit buttons.
+
+<details>
+<summary>Register Page(Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/signup-screenshot.png)
+</p>
+</details>
+
+<details>
+<summary>Login Page(Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/signin-screenshot.png)
+</p>
+</details>
+
+
 ### Product Detail Page
 
 - Will display a box containing product image on the left and information on the right, and in mobile view product 
@@ -459,6 +485,26 @@ which will send payment to stripe.
 <p align="center">
 
 ![Image](readme-images/product-admin-screenshot.png)
+</p>
+</details>
+
+### Favorites
+
+-  Will only be accessible by logged in users.
+-  Central title "Favorites"
+-  Underline graphic will display under title.
+-  When no favorites have been added the page will display "You have no favorites" and a button "view products" that will direct to
+the products page"
+-  When products have been added, they will display a grid containing each product. The grid will display 3 items on each row on tablet or larger 
+and 1 item per row on mobile.  
+-  Each item will display the product image, product name, product price and a button "View Item". When the button is
+selected users will be directed to that product details page.
+
+<details>
+<summary>Favorites (Click for image)</summary>
+<p align="center">
+
+![Image](readme-images/favorites-screenshot.png)
 </p>
 </details>
 
