@@ -33,15 +33,13 @@
             </div>
             {% endfor %}
         </div>
-        <div class="row">
-            <div class="col 8 offset-2">
-                <a href="{% url 'view_cart' %}" class="btns">
-                    <span>Go To Secure Checkout</span>
-                    <span class="icon">
-                        <i class="fas fa-lock"></i>
-                    </span>
-                </a>
-            </div>
+        <div class="text-center">
+            <a href="{% url 'view_cart' %}" class="btns">
+                <span>Go To Secure Checkout</span>
+                <span class="icon">
+                    <i class="fas fa-lock"></i>
+                </span>
+            </a>
         </div>
         {% endif %}
     </div>
